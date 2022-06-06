@@ -368,29 +368,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-add-maven-built-info" class="md-nav__link">
-    3. Add Maven Built Info
+  <a href="#3-buildgradle-add-maven-build-info" class="md-nav__link">
+    3. Build.Gradle: Add Maven Build Info
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-add-the-psi-classpath-to-dependencies" class="md-nav__link">
-    4. Add the PSi Classpath to Dependencies
+  <a href="#4-buildgradle-add-the-psi-classpath-to-dependencies" class="md-nav__link">
+    4. Build.Gradle: Add the PSi Classpath to Dependencies
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-apply-the-psi-transformerplugin" class="md-nav__link">
-    5. Apply the PSi transformer.plugin
+  <a href="#5-buildgradle-apply-the-psi-transformerplugin" class="md-nav__link">
+    5. Build.Gradle: Apply the PSi transformer.plugin
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-enable-psi-profiling" class="md-nav__link">
-    6. Enable PSi Profiling
+  <a href="#6-androidmanifestxml-enable-psi-profiling" class="md-nav__link">
+    6. AndroidManifest.xml: Enable PSi Profiling
   </a>
   
 </li>
@@ -506,29 +506,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-add-maven-built-info" class="md-nav__link">
-    3. Add Maven Built Info
+  <a href="#3-buildgradle-add-maven-build-info" class="md-nav__link">
+    3. Build.Gradle: Add Maven Build Info
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-add-the-psi-classpath-to-dependencies" class="md-nav__link">
-    4. Add the PSi Classpath to Dependencies
+  <a href="#4-buildgradle-add-the-psi-classpath-to-dependencies" class="md-nav__link">
+    4. Build.Gradle: Add the PSi Classpath to Dependencies
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-apply-the-psi-transformerplugin" class="md-nav__link">
-    5. Apply the PSi transformer.plugin
+  <a href="#5-buildgradle-apply-the-psi-transformerplugin" class="md-nav__link">
+    5. Build.Gradle: Apply the PSi transformer.plugin
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-enable-psi-profiling" class="md-nav__link">
-    6. Enable PSi Profiling
+  <a href="#6-androidmanifestxml-enable-psi-profiling" class="md-nav__link">
+    6. AndroidManifest.xml: Enable PSi Profiling
   </a>
   
 </li>
@@ -614,7 +614,7 @@
 </code></pre></div></p>
 <p>For example:<br />
 <img alt="creds" src="../images/creds.png" />  </p>
-<h3 id="3-add-maven-built-info">3. Add Maven Built Info</h3>
+<h3 id="3-buildgradle-add-maven-build-info">3. <code>Build.Gradle</code>: Add Maven Build Info</h3>
 <p>In <code>build.gradle</code> add the maven build info to the repositories for project and subprojects:  </p>
 <div class="highlight"><pre><span></span><code>maven <span class="o">{</span>
     url <span class="s2">&quot;https://maven.pkg.github.com/product-science/PSAndroid&quot;</span>
@@ -628,7 +628,7 @@
 <img alt="maven" src="../images/maven1.png" /><br />
 and <br />
 <img alt="maven" src="../images/maven2.png" />  </p>
-<h3 id="4-add-the-psi-classpath-to-dependencies">4. Add the PSi Classpath to Dependencies</h3>
+<h3 id="4-buildgradle-add-the-psi-classpath-to-dependencies">4. <code>Build.Gradle</code>: Add the PSi Classpath to Dependencies</h3>
 <p>Note that we are using a demo app for this example called “Signal” to visualize the process.
 Contact your Sales Engineer to get the <code>Version</code> of the Plugin- replace the <code>VERSIONSUPPLIEDBYPSI</code> with the <code>Version</code> we supply.  </p>
 <div class="highlight"><pre><span></span><code>classpath <span class="s2">&quot;com.productscience.transformer:transformer-plugin:VERSIONSUPPLIEDBYPSI&quot;</span>
@@ -636,11 +636,11 @@ classpath <span class="s2">&quot;com.productscience.transformer:transformer-inst
 </code></pre></div>
 <p>For example:<br />
 <img alt="classpath" src="../images/classpath.png" />  </p>
-<h3 id="5-apply-the-psi-transformerplugin">5. Apply the PSi transformer.plugin</h3>
+<h3 id="5-buildgradle-apply-the-psi-transformerplugin">5. <code>Build.Gradle</code>: Apply the PSi transformer.plugin</h3>
 <p>Apply plugin: <code>"com.productscience.transformer.plugin" to app/build.gradle</code></p>
 <p>For example:<br />
 <img alt="transformer" src="../images/transformer.png" />  </p>
-<h3 id="6-enable-psi-profiling">6. Enable PSi Profiling</h3>
+<h3 id="6-androidmanifestxml-enable-psi-profiling">6. <code>AndroidManifest.xml</code>: Enable PSi Profiling</h3>
 <p>Add <code>&lt;profileable android:shell="true" /&gt;</code> into <code>AndroidManifest.xml</code> to enable profiling</p>
 <p>For example:<br />
 <img alt="manifest" src="../images/manifest.png" />  </p>
