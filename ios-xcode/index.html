@@ -616,7 +616,7 @@
 <h2 id="optimization-loop">Optimization Loop</h2>
 <p>The Loop is repeated by your developers 20+ times initially and 5+ times with every major update.</p>
 <ol>
-<li>[Your devs]  Build the app with PSi Xcode instrumentation</li>
+<li>[Your devs]  Build the app with PSi Xcode Injector</li>
 <li>Ideally Product Science is provided with a trigger to create automation- otherwise a named developer can be supplied to rebuild</li>
 <li>[Your devs]  Provide a cloud link to your .ipa</li>
 <li>[Product Science] Runs the app and collects app performance data</li>
@@ -635,8 +635,8 @@
 </ul>
 <h3 id="2-configure-productscienceyaml">2. Configure <code>productscience.yaml</code></h3>
 <p>Set up <code>productscience.yaml</code> in the Xcode app project directory:<br />
-<div class="highlight"><pre><span></span><code>productscience.github.config:<span class="o">=</span>&lt;supplied-by-PSi&gt;
-productscience.github.token:<span class="o">=</span>&lt;supplied-by-PSi&gt;
+<div class="highlight"><pre><span></span><code>productscience.github.config: &lt;supplied-by-PSi&gt;
+productscience.github.token: &lt;supplied-by-PSi&gt;
 productscience.token: &lt;supplied-by-PSi&gt;
 </code></pre></div></p>
 <p>example <code>productscience.yaml</code>:  </p>
