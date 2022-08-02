@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ios-instructions" class="md-skip">
+        <a href="#ios-build-instructions-xcode" class="md-skip">
           Skip to content
         </a>
       
@@ -423,8 +423,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-configure-and-text-xcodebuild" class="md-nav__link">
-    2. Configure and text xcodebuild
+  <a href="#2-configure-and-test-xcodebuild" class="md-nav__link">
+    2. Configure and test xcodebuild
   </a>
   
 </li>
@@ -567,8 +567,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-configure-and-text-xcodebuild" class="md-nav__link">
-    2. Configure and text xcodebuild
+  <a href="#2-configure-and-test-xcodebuild" class="md-nav__link">
+    2. Configure and test xcodebuild
   </a>
   
 </li>
@@ -606,7 +606,7 @@
                 
 
 
-<h1 id="ios-instructions">IOS Instructions:</h1>
+<h1 id="ios-build-instructions-xcode">iOS Build Instructions - Xcode</h1>
 <h2 id="preparation">Preparation</h2>
 <ol>
 <li>Set up Xcode build with the Product Science Instrumentation Injector from the Product Science Github repo (see instructions below)</li>
@@ -666,7 +666,7 @@ A reference example using the Firefox Fennec iOS app is shown below.</p>
 <li>Download PSTools-PLATFORM.zip from <a href="https://github.com/product-science/PSios/releases/tag/v1.3.0">this link</a> and unzip it  </li>
 <li>Install PSTools/PSCliCodeInjector.pkg on your Mac with double-click  </li>
 <li>Copy PSTools/PSKit to ps-workdir i.e.<br />
-<code>cp -rf PSTools/PSKit .</code></li>
+<code>cp -r PSTools/PSKit .</code></li>
 </ol>
 <p>See the Firefox example below for sample final directory structure.</p>
 <p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br />
@@ -696,7 +696,7 @@ A reference example using the Firefox Fennec iOS app is shown below.</p>
 <h3 id="1-clone-firefox-ios-repo">1. Clone Firefox iOS repo</h3>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/mozilla-mobile/firefox-ios
 </code></pre></div>
-<h3 id="2-configure-and-text-xcodebuild">2. Configure and text <code>xcodebuild</code></h3>
+<h3 id="2-configure-and-test-xcodebuild">2. Configure and test <code>xcodebuild</code></h3>
 <p>In the <code>firefox-ios</code> directory</p>
 <div class="highlight"><pre><span></span><code>xcodebuild <span class="se">\</span>
     -project Client.xcodeproj <span class="se">\</span>
@@ -708,7 +708,10 @@ A reference example using the Firefox Fennec iOS app is shown below.</p>
 <h3 id="3-create-creds-and-install-pstools">3. Create Creds and install PStools</h3>
 <p>Create the <code>productscience.yaml</code> file in the <code>firefox-ios</code> directory as shown in Step 2 above.</p>
 <p>Download, unzip, and install <code>PStools</code> as shown in Step 4 above.</p>
-<p>Make sure that the <code>PSKit</code> is in the same top level directory level as <code>firefox-ios</code> i.e.</p>
+<p>Make sure that the <code>PSKit</code> is in the same top level directory level as <code>firefox-ios</code>:<br />
+<div class="highlight"><pre><span></span><code>cp -r PSTools/PSKit .
+</code></pre></div>
+ i.e.</p>
 <div class="highlight"><pre><span></span><code>drwxr-xr-x@  <span class="m">5</span> user  staff       <span class="m">160</span> Jul <span class="m">12</span> <span class="m">16</span>:24 PSKit
 drwxr-xr-x@  <span class="m">6</span> user  staff       <span class="m">192</span> Jul  <span class="m">5</span> <span class="m">10</span>:22 PSTools
 drwxr-xr-x  <span class="m">76</span> user  staff      <span class="m">2432</span> Jul <span class="m">12</span> <span class="m">16</span>:26 firefox-ios
@@ -734,7 +737,7 @@ drwxr-xr-x@  <span class="m">6</span> user  staff       <span class="m">192</spa
 drwxr-xr-x  <span class="m">76</span> user  staff      <span class="m">2432</span> Jul <span class="m">12</span> <span class="m">16</span>:26 firefox-ios
 drwxr-xr-x  <span class="m">77</span> user  staff      <span class="m">2464</span> Jul <span class="m">12</span> <span class="m">16</span>:46 firefox-ios-ps
 </code></pre></div>
-<p>This new <code>ps</code> directory is the one to use for the instrumented build. Use this one (<code>firefox-ios-ps</code>) for your pipeline or Xcode.</p>
+<p>This new <code>ps</code> directory is the one to use for the instrumented build. Use (<code>firefox-ios-ps</code>) for your pipeline or Xcode.</p>
 
               
             </article>

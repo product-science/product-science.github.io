@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradle-instructions-android" class="md-skip">
+        <a href="#gradle-build-instructions-android" class="md-skip">
           Skip to content
         </a>
       
@@ -594,7 +594,7 @@
                 
 
 
-<h1 id="gradle-instructions-android">Gradle Instructions - Android</h1>
+<h1 id="gradle-build-instructions-android">Gradle Build Instructions - Android</h1>
 <h2 id="preparation">Preparation</h2>
 <ol>
 <li>Set up Gradle build with the Product Science plugin from the Product Science Github repo (see instructions below.)</li>
@@ -645,8 +645,8 @@ and <br />
 <h3 id="4-buildgradle-add-the-psi-classpath-to-dependencies">4. <code>Build.Gradle</code>: Add the PSi Classpath to Dependencies</h3>
 <p>Note that we are using a demo app for this example called “Signal” to visualize the process.
 Contact your Sales Engineer to get the <code>Version</code> of the Plugin- replace the <code>VERSIONSUPPLIEDBYPSI</code> with the <code>Version</code> we supply.  </p>
-<div class="highlight"><pre><span></span><code>classpath <span class="s2">&quot;com.productscience.transformer:transformer-plugin:VERSIONSUPPLIEDBYPSI&quot;</span>
-classpath <span class="s2">&quot;com.productscience.transformer:transformer-instrumentation:VERSIONSUPPLIEDBYPSI&quot;</span>
+<div class="highlight"><pre><span></span><code>classpath <span class="s2">&quot;com.productscience.transformer:transformer-plugin:&lt;VERSIONSUPPLIEDBYPSI&gt;&quot;</span>
+classpath <span class="s2">&quot;com.productscience.transformer:transformer-instrumentation:&lt;VERSIONSUPPLIEDBYPSI&gt;&quot;</span>
 </code></pre></div>
 <p>For example:<br />
 <img alt="classpath" src="../images/classpath.png" />  </p>
@@ -663,8 +663,8 @@ classpath <span class="s2">&quot;com.productscience.transformer:transformer-inst
 <img alt="manifest" src="../images/manifest.png" />  </p>
 <h3 id="7-setup-psi-properties">7. Setup PSi Properties</h3>
 <p>Create a file called <code>productscience.properties</code> and add the PSi config/token to it</p>
-<div class="highlight"><pre><span></span><code>productscience.github.config<span class="o">=</span>product-science:CLIENTNAME-configs:ps-CLIENTNAME.yaml:master
-productscience.github.token<span class="o">=</span>&lt;supplied-by-PSI&gt;
+<div class="highlight"><pre><span></span><code>productscience.github.config<span class="o">=</span>&lt;VERSIONSUPPLIEDBYPSI&gt;<span class="s2">&quot;</span>
+<span class="s2">productscience.github.token=&lt;supplied-by-PSI&gt;</span>
 </code></pre></div>
 <h3 id="proguard">Proguard</h3>
 <p>If the application uses obfuscation/shrinking add a new ProGuard rule to your project.
