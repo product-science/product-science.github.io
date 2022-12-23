@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradle-build-instructions-android" class="md-skip">
+        <a href="#macro-rendering-error" class="md-skip">
           Skip to content
         </a>
       
@@ -392,82 +392,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Build / Gradle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Build / Gradle
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-credentials" class="md-nav__link">
-    1. Credentials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-add-product-science-maven-repository" class="md-nav__link">
-    2. Add Product Science maven repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-add-product-science-plugin-to-classpath" class="md-nav__link">
-    3. Add Product Science plugin to classpath
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-apply-the-product-science-plugin" class="md-nav__link">
-    4. Apply the Product Science Plugin
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-add-proguard-rules" class="md-nav__link">
-    5. Add Proguard rules
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-build-your-app" class="md-nav__link">
-    6. Build your app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enabling-the-plugin-by-build-type" class="md-nav__link">
-    Enabling the plugin by build type
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -572,63 +499,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-credentials" class="md-nav__link">
-    1. Credentials
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-add-product-science-maven-repository" class="md-nav__link">
-    2. Add Product Science maven repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-add-product-science-plugin-to-classpath" class="md-nav__link">
-    3. Add Product Science plugin to classpath
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-apply-the-product-science-plugin" class="md-nav__link">
-    4. Apply the Product Science Plugin
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-add-proguard-rules" class="md-nav__link">
-    5. Add Proguard rules
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-build-your-app" class="md-nav__link">
-    6. Build your app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enabling-the-plugin-by-build-type" class="md-nav__link">
-    Enabling the plugin by build type
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -647,250 +517,23 @@
   </a>
 
 
-<h1 id="gradle-build-instructions-android">Gradle Build Instructions - Android</h1>
-<h2 id="1-credentials">1. Credentials</h2>
-<p>Product Science shared access credentials (<code>productscience.properties</code> file) via Bitwarden sent. 
-Please place it in the root directory of your project.</p>
-<p>Product Science Android plugin is distributed as public GitHub maven package. 
-It's publicly available but requires authentication with github account.</p>
-<p>Please <a href="https://github.com/settings/tokens/new">generate new token</a> with <strong>read:packages</strong> access and setup <code>gradle.properties</code> in your home directory <code>~/.gradle/gradle.properties</code>.</p>
-<div class="highlight"><span class="filename">~/.gradle/gradle.properties</span><pre><span></span><code><span class="na">github_user</span><span class="o">=</span><span class="s">&lt;Github Account&gt;</span><span class="w"></span>
-<span class="na">github_key</span><span class="o">=</span><span class="s">&lt;Github Token&gt;</span><span class="w"></span>
+<h1 id="macro-rendering-error"><em>Macro Rendering Error</em></h1>
+<p><strong>KeyError</strong>: 'PS_GITHUB_TOKEN'</p>
+<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
+  File &quot;/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/mkdocs_macros/plugin.py&quot;, line 480, in render
+    return md_template.render(**page_variables)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/jinja2/environment.py&quot;, line 1301, in render
+    self.environment.handle_exception()
+  File &quot;/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/jinja2/environment.py&quot;, line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File &quot;&lt;template&gt;&quot;, line 125, in top-level template code
+  File &quot;/opt/hostedtoolcache/Python/3.11.1/x64/lib/python3.11/site-packages/ps-plugin/__init__.py&quot;, line 22, in android_release
+    token = os.environ[&quot;PS_GITHUB_TOKEN&quot;]
+            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File &quot;&lt;frozen os&gt;&quot;, line 679, in __getitem__
+KeyError: &#39;PS_GITHUB_TOKEN&#39;
 </code></pre></div>
-<h2 id="2-add-product-science-maven-repository">2. Add Product Science maven repository</h2>
-<p>In <code>build.gradle</code> add the maven build info to the repositories for project and subprojects:  </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Groovy</label><label for="__tabbed_1_2">Kotlin DSL</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/product-science/PSAndroid&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="n">credentials</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">github_user</span><span class="w"></span>
-<span class="w">                </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">github_key</span><span class="w"></span>
-<span class="w">            </span><span class="o">}</span><span class="w"></span>
-<span class="w">        </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-
-<span class="n">allprojects</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/product-science/PSAndroid&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="n">credentials</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">github_user</span><span class="w"></span>
-<span class="w">                </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">github_key</span><span class="w"></span>
-<span class="w">            </span><span class="o">}</span><span class="w"></span>
-<span class="w">        </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">&quot;https://maven.pkg.github.com/product-science/PSAndroid&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">credentials</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;github_user&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;github_key&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="n">allprojects</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">&quot;https://maven.pkg.github.com/product-science/PSAndroid&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">credentials</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;github_user&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;github_key&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>If the project is configured to prefer settings repositories maven source should be added to settings file:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Groovy</label><label for="__tabbed_2_2">Kotlin DSL</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">settings.gradle</span><pre><span></span><code><span class="o">...</span><span class="w"></span>
-<span class="n">dependencyResolutionManagement</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositoriesMode</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">RepositoriesMode</span><span class="o">.</span><span class="na">FAIL_ON_PROJECT_REPOS</span><span class="o">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/product-science/PSAndroid&quot;</span><span class="w"></span>
-<span class="w">            </span><span class="n">credentials</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">github_user</span><span class="w"></span>
-<span class="w">                </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">github_key</span><span class="w"></span>
-<span class="w">            </span><span class="o">}</span><span class="w"></span>
-<span class="w">        </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">settings.gradle.kts</span><pre><span></span><code><span class="p">...</span><span class="w"></span>
-<span class="n">dependencyResolutionManagement</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositoriesMode</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">RepositoriesMode</span><span class="p">.</span><span class="na">FAIL_ON_PROJECT_REPOS</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">&quot;https://maven.pkg.github.com/product-science/PSAndroid&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="n">credentials</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;github_user&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;github_key&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>In another case, if <code>allprojects</code> is not present in top level <code>build.gradle</code> then add it in the top of the file.  </p>
-<h2 id="3-add-product-science-plugin-to-classpath">3. Add Product Science plugin to <code>classpath</code></h2>
-<p>Contact your Sales Engineer to get the <code>Version</code> of the Plugin to replace the <code>VERSIONSUPPLIEDBYPSI</code> with the <code>Version</code> we supply.  </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Groovy</label><label for="__tabbed_3_2">Kotlin DSL</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer:transformer-plugin:0.13.1&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer:transformer-instrumentation:0.13.1&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-<span class="o">...</span><span class="w"></span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer:transformer-plugin:0.13.1&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer:transformer-instrumentation:0.13.1&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br />
-<code>MyAppPSi0.9.1.apk</code> 
-<strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
-<h2 id="4-apply-the-product-science-plugin">4. Apply the Product Science Plugin</h2>
-<p>Apply plugin to <code>app/build.gradle</code>  </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Groovy</label><label for="__tabbed_4_2">Kotlin DSL</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;com.android.application&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;kotlin-android&quot;</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-<span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer.plugin&quot;</span><span class="w"></span>
-<span class="o">...</span><span class="w"></span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">app/build.gradle.kts</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;kotlin-android&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer.plugin&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="5-add-proguard-rules">5. Add Proguard rules</h2>
-<p>If the application uses obfuscation/shrinking add a new ProGuard rule to your project.
-To achieve it add the next line to the R8/ProGuard configuration file: </p>
-<div class="highlight"><span class="filename">proguard-rules.pro.</span><pre><span></span><code>-keep class com.productscience.transformer.module.** { *; }
-</code></pre></div>
-<p>Your project may use the other proguard file name.</p>
-<p>More information about R8/ProGuard configuration can be found here:
-<a href="https://developer.android.com/studio/build/shrink-code">https://developer.android.com/studio/build/shrink-code</a></p>
-<h2 id="6-build-your-app">6. Build your app</h2>
-<p>Now you can build your app with Gradle, i.e.:
-<div class="highlight"><pre><span></span><code>./gradlew assemble
-</code></pre></div></p>
-<p><strong>Please label your build with the Plugin Version from above i.e.</strong><br />
-<code>MyApp_PSi-0.14.2.apk</code> 
-<strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
-<hr />
-<h2 id="enabling-the-plugin-by-build-type">Enabling the plugin by build type</h2>
-<p>For plugin versions greater than <strong>0.12.1</strong>, 
-you can integrate Product Science pipeline into your gradle build 
-selectively apply the plugin to a given build type by adding a <code>productScience</code> block 
-at the top level of your <code>app/build.gradle</code> file. </p>
-<p>Inside the proguard block, add a block corresponding to the build type (must have the same name) and set <code>enabled</code> to <code>true</code>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Groovy</label><label for="__tabbed_5_2">Kotlin DSL</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;com.android.application&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;kotlin-android&quot;</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-<span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer.plugin&quot;</span><span class="w"> </span>
-<span class="n">productScience</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">psiRelease</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">enabled</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-
-<span class="n">android</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">    </span><span class="o">...</span><span class="w"></span>
-<span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">psiRelease</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">minifyEnabled</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">        </span><span class="o">}</span><span class="w"></span>
-<span class="w">        </span><span class="n">release</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">minifyEnabled</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">        </span><span class="o">}</span><span class="w"></span>
-<span class="w">    </span><span class="o">}</span><span class="w"></span>
-<span class="o">}</span><span class="w"></span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">app/build.gradle.kts</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;kotlin-android&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer.plugin&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="n">productScience</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">create</span><span class="p">(</span><span class="s">&quot;psiRelease&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">isEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="n">android</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">create</span><span class="p">(</span><span class="s">&quot;psiRelease&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">isMinifyEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">isMinifyEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>If the <code>productScience</code> block is missing or empty, the plugin will be applied to all build types.
-If one or more build types appear in the <code>productScience</code> block,
-the plugin will be applied only to those build types that have <code>enabled</code> set to true. </p>
 
 
 
