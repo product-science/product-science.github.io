@@ -10,21 +10,27 @@
       
       
       
+        <link rel="canonical" href="https://github.com/product-science/docs/android/cicd/">
       
       
-      <link rel="icon" href="/product-science/docs/images/Icon.png">
+        <link rel="prev" href="../gradle/">
+      
+      
+        <link rel="next" href="../user-flow/">
+      
+      <link rel="icon" href="../../images/Icon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title></title>
+        <title>CICD / Gradle - </title>
       
     
     
-      <link rel="stylesheet" href="/product-science/docs/assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="/product-science/docs/assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -40,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="/product-science/docs/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/product-science/docs/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -51,10 +57,12 @@
     
     
     
+      
+    
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
+    <meta property="og:title" content=" - CICD / Gradle">
     <meta property="og:description" content="Learn to configure and use Product Science">
-    <meta property="og:url" content="">
+    <meta property="og:url" content="https://github.com/product-science/docs/android/cicd/">
     <meta property="og:image" content="">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1080">
@@ -81,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#cicd-integration-with-gradle" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -91,9 +104,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/product-science/docs/." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+    <a href="../.." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
       
-  <img src="/product-science/docs/images/logo-text.svg" alt="logo">
+  <img src="../../images/logo-text.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              CICD / Gradle
             
           </span>
         </div>
@@ -206,7 +219,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/product-science/docs/." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -214,6 +227,8 @@
       
         
   
+  
+    
   
 
 
@@ -226,7 +241,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/product-science/docs/android/gradle/" class="md-tabs__link">
+      <a href="../gradle/" class="md-tabs__link md-tabs__link--active">
         Integration
       </a>
     </li>
@@ -256,9 +271,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/product-science/docs/." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+    <a href="../.." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
       
-  <img src="/product-science/docs/images/logo-text.svg" alt="logo">
+  <img src="../../images/logo-text.svg" alt="logo">
 
     </a>
     
@@ -286,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/product-science/docs/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -299,16 +314,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
         
@@ -318,7 +333,7 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
           Integration
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -334,16 +349,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       
         
@@ -355,7 +370,7 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_2_1" tabindex="0" aria-expanded="true">
           Android
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -373,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/product-science/docs/android/gradle/" class="md-nav__link">
+      <a href="../gradle/" class="md-nav__link">
         Build / Gradle
       </a>
     </li>
@@ -385,11 +400,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/product-science/docs/android/cicd/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CICD / Gradle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CICD / Gradle
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-variant" class="md-nav__link">
+    Build Variant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-plugin-apply" class="md-nav__link">
+    Conditional plugin apply
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -401,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/product-science/docs/android/user-flow/" class="md-nav__link">
+      <a href="../user-flow/" class="md-nav__link">
         User Flow Annotation
       </a>
     </li>
@@ -455,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/product-science/docs/ios/xcode/" class="md-nav__link">
+      <a href="../../ios/xcode/" class="md-nav__link">
         Build / Xcode
       </a>
     </li>
@@ -493,6 +556,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-variant" class="md-nav__link">
+    Build Variant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-plugin-apply" class="md-nav__link">
+    Conditional plugin apply
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -504,8 +591,133 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+
+<h1 id="cicd-integration-with-gradle">CICD Integration with Gradle</h1>
+<p>Product Science suggests two main approach for integration Gradle plugin in CICD. </p>
+<h2 id="build-variant">Build Variant</h2>
+<ul>
+<li><a href="https://github.com/product-science/demoapps/tree/main/cicd-examples/android-buildvariant">Example App</a></li>
+<li><a href="https://github.com/product-science/demoapps/blob/main/.github/workflows/cicd-buildvariant.yml">Example GitHub workflow</a></li>
+<li><a href="https://product-science.github.io/android/gradle/#enabling-the-plugin-by-build-type">Build Variant docs</a></li>
+</ul>
+<p>This approach is based on <a href="https://developer.android.com/studio/build/build-variants">Gradle build variant</a>.
+A build variant <code>psiRelease</code> is created for instrumented version of the app. 
+PS Plugin is applied only for this build variant.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Groovy</label><label for="__tabbed_1_2">Kotlin DSL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.android.application&#39;</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;kotlin-android&#39;</span>
+<span class="o">}</span>
+
+<span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer.plugin&quot;</span><span class="w"> </span>
+
+<span class="n">productScience</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">psiRelease</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">enabled</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">android</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">defaultConfig</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+
+<span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">release</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="o">...</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">        </span><span class="n">psiRelease</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="o">...</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;kotlin-android&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer.plugin&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">productScience</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">create</span><span class="p">(</span><span class="s">&quot;psiRelease&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">isEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">android</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">create</span><span class="p">(</span><span class="s">&quot;psiRelease&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="p">...</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">getByName</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="p">...</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Build can be triggered with gradle command:
+<div class="highlight"><pre><span></span><code>./gradlew assemblePsiRelease
+</code></pre></div></p>
+<h2 id="conditional-plugin-apply">Conditional plugin apply</h2>
+<ul>
+<li><a href="https://github.com/product-science/demoapps/tree/main/cicd-examples/android-condition">Example App</a></li>
+<li><a href="https://github.com/product-science/demoapps/blob/main/.github/workflows/cicd-condition.yml">Example GitHub workflow</a></li>
+</ul>
+<p>This approach is based on conditional applying of gradle plugin.
+PS Plugin is applied only when the value of <code>USE_PSTOOL</code> environment variable is true.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Groovy</label><label for="__tabbed_2_2">Kotlin DSL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.android.application&#39;</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;kotlin-android&#39;</span>
+<span class="o">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s2">&quot;USE_PSTOOL&quot;</span><span class="o">))</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer.plugin&quot;</span><span class="w"> </span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Build can be triggered with gradle command:
+<div class="highlight"><pre><span></span><code>USE_PSTOOL=true ./gradlew assembleRelease
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;kotlin-android&quot;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">usePSPlugin</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getenv</span><span class="p">(</span><span class="s">&quot;USE_PSTOOL&quot;</span><span class="p">).</span><span class="na">toBoolean</span><span class="p">()</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">usePSPlugin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer.plugin&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Build can be triggered with gradle command:
+<div class="highlight"><pre><span></span><code>USE_PSTOOL=true ./gradlew assembleRelease
+</code></pre></div></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -559,10 +771,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/product-science/docs/", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "/product-science/docs/assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/product-science/docs/assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
   </body>
