@@ -10,20 +10,18 @@
       
       
       
-        <link rel="canonical" href="https://github.com/product-science/docs/ios/xcode/">
+        <link rel="canonical" href="https://github.com/product-science/docs/ios/distribution/">
       
       
-        <link rel="prev" href="../../android/user-flow/">
+        <link rel="prev" href="../xcode/">
       
-      
-        <link rel="next" href="../distribution/">
       
       <link rel="icon" href="../../images/Icon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>Build / Xcode - </title>
+        <title>App Distribution - </title>
       
     
     
@@ -60,9 +58,9 @@
       
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content=" - Build / Xcode">
+    <meta property="og:title" content=" - App Distribution">
     <meta property="og:description" content="Learn to configure and use Product Science">
-    <meta property="og:url" content="https://github.com/product-science/docs/ios/xcode/">
+    <meta property="og:url" content="https://github.com/product-science/docs/ios/distribution/">
     <meta property="og:image" content="">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1080">
@@ -90,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ios-build-instructions-xcode" class="md-skip">
+        <a href="#ios-application-distribution-instructions" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Build / Xcode
+              App Distribution
             
           </span>
         </div>
@@ -470,6 +468,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../xcode/" class="md-nav__link">
+        Build / Xcode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -482,12 +494,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Build / Xcode
+          App Distribution
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Build / Xcode
+        App Distribution
       </a>
       
         
@@ -506,73 +518,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-configure-productscienceyaml" class="md-nav__link">
-    1. Configure productscience.yaml
+  <a href="#option-1-testflight" class="md-nav__link">
+    Option 1: TestFlight
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-configure-and-test-xcodebuild" class="md-nav__link">
-    2. Configure and Test xcodebuild
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-install-pstools-instrumentation-injection-kit" class="md-nav__link">
-    3. Install PSTools Instrumentation Injection Kit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-build" class="md-nav__link">
-    4. Build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-distribute-build" class="md-nav__link">
-    5. Distribute Build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-firefox-for-ios" class="md-nav__link">
-    Example: Firefox for iOS
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: Firefox for iOS">
+    <nav class="md-nav" aria-label="Option 1: TestFlight">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-clone-firefox-ios-repo" class="md-nav__link">
-    1. Clone Firefox iOS repo
+  <a href="#distribution-process" class="md-nav__link">
+    Distribution Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-ad-hoc-ipa" class="md-nav__link">
+    Option 2: Ad-Hoc IPA
+  </a>
+  
+    <nav class="md-nav" aria-label="Option 2: Ad-Hoc IPA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribution-process_1" class="md-nav__link">
+    Distribution Process
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-configure-and-test-xcodebuild_1" class="md-nav__link">
-    2. Configure and test xcodebuild
+  <a href="#signing-options" class="md-nav__link">
+    Signing Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Signing Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-option-add-ps-devices-to-apple-development-account" class="md-nav__link">
+    Best Option: Add PS Devices to Apple Development Account
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-create-creds-and-install-pstools" class="md-nav__link">
-    3. Create Creds and install PStools
+  <a href="#risky-option-re-signing-ipa-after-build" class="md-nav__link">
+    Risky Option: Re-Signing IPA After Build
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-build-with-psclicodeinjector" class="md-nav__link">
-    4. Build with PSCliCodeInjector
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -585,20 +588,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../distribution/" class="md-nav__link">
-        App Distribution
-      </a>
     </li>
   
 
@@ -644,73 +633,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-configure-productscienceyaml" class="md-nav__link">
-    1. Configure productscience.yaml
+  <a href="#option-1-testflight" class="md-nav__link">
+    Option 1: TestFlight
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-configure-and-test-xcodebuild" class="md-nav__link">
-    2. Configure and Test xcodebuild
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-install-pstools-instrumentation-injection-kit" class="md-nav__link">
-    3. Install PSTools Instrumentation Injection Kit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-build" class="md-nav__link">
-    4. Build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-distribute-build" class="md-nav__link">
-    5. Distribute Build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-firefox-for-ios" class="md-nav__link">
-    Example: Firefox for iOS
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: Firefox for iOS">
+    <nav class="md-nav" aria-label="Option 1: TestFlight">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-clone-firefox-ios-repo" class="md-nav__link">
-    1. Clone Firefox iOS repo
+  <a href="#distribution-process" class="md-nav__link">
+    Distribution Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-ad-hoc-ipa" class="md-nav__link">
+    Option 2: Ad-Hoc IPA
+  </a>
+  
+    <nav class="md-nav" aria-label="Option 2: Ad-Hoc IPA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribution-process_1" class="md-nav__link">
+    Distribution Process
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-configure-and-test-xcodebuild_1" class="md-nav__link">
-    2. Configure and test xcodebuild
+  <a href="#signing-options" class="md-nav__link">
+    Signing Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Signing Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-option-add-ps-devices-to-apple-development-account" class="md-nav__link">
+    Best Option: Add PS Devices to Apple Development Account
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-create-creds-and-install-pstools" class="md-nav__link">
-    3. Create Creds and install PStools
+  <a href="#risky-option-re-signing-ipa-after-build" class="md-nav__link">
+    Risky Option: Re-Signing IPA After Build
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-build-with-psclicodeinjector" class="md-nav__link">
-    4. Build with PSCliCodeInjector
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -737,118 +717,45 @@
   
 
 
-<h1 id="ios-build-instructions-xcode">iOS Build Instructions - Xcode</h1>
-<h3 id="1-configure-productscienceyaml">1. Configure <code>productscience.yaml</code></h3>
-<p>Put this file into root of build directory</p>
-<p><em>This step is not needed if you use standalone build.</em></p>
-<h3 id="2-configure-and-test-xcodebuild">2. Configure and Test <code>xcodebuild</code></h3>
-<p>Prepare an <code>xcodebuild</code> command to build the app in terminal.  </p>
-<p>For projects that are organized with <code>xcworkspace</code>: </p>
-<div class="highlight"><pre><span></span><code>xcodebuild<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-workspace<span class="w"> </span>MyApp.xcworkspace<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-scheme<span class="w"> </span>MyAppScheme<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-sdk<span class="w"> </span>iphoneos
-</code></pre></div>
-<p>For <code>xcodeproj</code> based projects:  </p>
-<p><div class="highlight"><pre><span></span><code>xcodebuild<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-project<span class="w"> </span>MyApp.xcodeproj<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-scheme<span class="w"> </span>MyAppScheme<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-sdk<span class="w"> </span>iphoneos
-</code></pre></div>
-Ensure that your app can build successfully before using the <code>PSCliCodeInjector</code>.
-A reference example using the Firefox Fennec iOS app is shown below.</p>
-<h3 id="3-install-pstools-instrumentation-injection-kit">3. Install <code>PSTools</code> Instrumentation Injection Kit</h3>
-<p>You will need to use the github credentials supplied by PSi to above to follow these steps:</p>
+<h1 id="ios-application-distribution-instructions">iOS Application Distribution Instructions</h1>
+<p>iOS applications are distributed as IPA archives. To export application it must be signed with some Apple Development Team certificate.</p>
+<h2 id="option-1-testflight">Option 1: TestFlight</h2>
+<p>TestFlight is the default Apple tool for beta testing: <a href="https://developer.apple.com/testflight/">https://developer.apple.com/testflight/</a></p>
+<h3 id="distribution-process">Distribution Process</h3>
 <ol>
-<li>Download the latest PSTools-PLATFORM.zip from our <a href="https://github.com/product-science/PSios/releases">public plugin repo</a> and unzip it  </li>
-<li>Install PSTools/PSCliCodeInjector.pkg on your Mac with double-click  </li>
-<li>Copy PSTools/PSKit to ps-workdir i.e.<br />
-<code>cp -r PSTools/PSKit .</code></li>
+<li><em>PS</em>: Send employee emails</li>
+<li><em>Client</em>: Build PS-injected app and upload it in TestFlight</li>
+<li><em>Client</em>: Invite Product Science emails as testers for uploaded app</li>
 </ol>
-<p>See the Firefox example below for sample final directory structure.</p>
-<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br />
-<code>MyAppPSi0.9.1.ipa</code> 
-<strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
-<h3 id="4-build">4. Build</h3>
-<ul>
-<li>
-<p>Ensure that the <code>PSKit</code> tool folder is at the same folder level as your project i.e.:<br />
-<div class="highlight"><pre><span></span><code>drwxr-xr-x@  5 user  staff       160 Jul 12 16:24 PSKit
-drwxr-xr-x@  6 user  staff       192 Jul  5 10:22 PSTools
-drwxr-xr-x  76 user  staff      2432 Jul 12 16:26 MyApp
-</code></pre></div></p>
-</li>
-<li>
-<p>Run PSTool code transformation and configuration fine-tuning. The <code>PSCliCodeInjector</code> command must be run at the folder level above where the <code>.xcodeproj</code> sits and run against that folder. For example, if the project is <code>./MyApp/MyApp.xcodeproj</code> then from the <code>.</code> level folder run:<br />
-<div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>MyApp<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--backup-dir<span class="w"> </span>MyApp-BACKUP<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--sub-folders<span class="o">=</span>.<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--console-build-command<span class="o">=</span><span class="s2">&quot;&lt;BUILD-COMMAND-FROM_STEP-3&gt;&quot;</span>
-</code></pre></div></p>
-</li>
-</ul>
-<p>This step transforms the code of within the <code>MyApp</code> project folder.<br />
-A backup of the original <code>./MyApp</code> will be created at the same folder level where injection is run i.e. <code>./MyApp-BACKUP</code>.</p>
-<p>The <strong>BUILD-COMMAND-FROM_STEP-2</strong> is the choice between the xcworkspace or xcodeproj methods and their associated flags. These are examples of xcodebuild templates- yours may differ. See the Firefox app example below.</p>
-<p>⚠️ Warning: <em>PSCliCodeInjector parses the command’s output to identify issues with the injected code. Be sure not to pipe the build’s results through tools like xcbeautify, xcpretty, etc. or this logic might not work correctly.</em></p>
-<p>When complete, the <code>MyApp</code> directory will have been transformed. Use this directory for your build.</p>
-<ul>
-<li>Open project from <code>MyApp</code> directory</li>
-<li>Build and export the app in your default pipeline.</li>
-<li>Send us MyApp/psfilter.txt if it exists</li>
-</ul>
-<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br />
-<code>MyAppPSi0.9.1.ipa</code> 
-<strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
-<h3 id="5-distribute-build">5. Distribute Build</h3>
-<p>Please follow instructions at <a href="../distribution/">iOS Distribution Instructions</a> to share your build with us</p>
-<h2 id="example-firefox-for-ios">Example: Firefox for iOS</h2>
-<h3 id="1-clone-firefox-ios-repo">1. Clone Firefox iOS repo</h3>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mozilla-mobile/firefox-ios
-</code></pre></div>
-<h3 id="2-configure-and-test-xcodebuild_1">2. Configure and test <code>xcodebuild</code></h3>
-<p>In the <code>firefox-ios</code> directory</p>
-<div class="highlight"><pre><span></span><code>xcodebuild<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-project<span class="w"> </span>Client.xcodeproj<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-scheme<span class="w"> </span>Fennec<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-destination<span class="w"> </span><span class="s1">&#39;name=iPhone 13 mini&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-sdk<span class="w"> </span>iphoneos
-</code></pre></div>
-<p>Note this example uses <code>iPhone 13 mini</code> as the example destination- this can be changed.</p>
-<h3 id="3-create-creds-and-install-pstools">3. Create Creds and install PStools</h3>
-<p>Create the <code>productscience.yaml</code> file in the <code>firefox-ios</code> directory as shown in Step 2 above.</p>
-<p>Download, unzip, and install <code>PStools</code> as shown in Step 4 above.</p>
-<p>Make sure that the <code>PSKit</code> is in the same top level directory level as <code>firefox-ios</code>:<br />
-<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-r<span class="w"> </span>PSTools/PSKit<span class="w"> </span>.
-</code></pre></div>
- i.e.</p>
-<div class="highlight"><pre><span></span><code>drwxr-xr-x@<span class="w">  </span><span class="m">5</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">160</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:24<span class="w"> </span>PSKit
-drwxr-xr-x@<span class="w">  </span><span class="m">6</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">192</span><span class="w"> </span>Jul<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">10</span>:22<span class="w"> </span>PSTools
-drwxr-xr-x<span class="w">  </span><span class="m">76</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">      </span><span class="m">2432</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:26<span class="w"> </span>firefox-ios
-</code></pre></div>
-<p><em>If you use standalone put <code>productscience.zip</code> archive in project directory.</em></p>
-<h3 id="4-build-with-psclicodeinjector">4. Build with <code>PSCliCodeInjector</code></h3>
-<p>This is done in the same directory level as the <code>firefox-ios</code> directory i.e. the same one as shown above- NOT IN the <code>firefox-ios</code> directory:</p>
-<div class="highlight"><pre><span></span><code>drwxr-xr-x@<span class="w">  </span><span class="m">5</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">160</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:24<span class="w"> </span>PSKit
-drwxr-xr-x@<span class="w">  </span><span class="m">6</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">192</span><span class="w"> </span>Jul<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">10</span>:22<span class="w"> </span>PSTools
-drwxr-xr-x<span class="w">  </span><span class="m">76</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">      </span><span class="m">2432</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:26<span class="w"> </span>firefox-ios
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>firefox-ios<span class="w"> </span>--backup-dir<span class="w"> </span>firefox-ios-BACKUP<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--sub-folders<span class="o">=</span>.<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--console-build-command<span class="o">=</span><span class="se">\</span>
-<span class="w">      </span><span class="s2">&quot;xcodebuild \</span>
-<span class="s2">          -project Client.xcodeproj \</span>
-<span class="s2">          -scheme Fennec \</span>
-<span class="s2">          -destination &#39;name=iPhone 13 mini&#39; \</span>
-<span class="s2">          -sdk iphoneos&quot;</span>
-</code></pre></div>
-<p>When complete, the <code>firefox-ios</code> directory will have been transformed. <code>firefox-ios-BACKUP</code> is a directory with original project.
-<div class="highlight"><pre><span></span><code>drwxr-xr-x@<span class="w">  </span><span class="m">5</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">160</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:24<span class="w"> </span>PSKit
-drwxr-xr-x@<span class="w">  </span><span class="m">6</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">192</span><span class="w"> </span>Jul<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">10</span>:22<span class="w"> </span>PSTools
-drwxr-xr-x<span class="w">  </span><span class="m">76</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">      </span><span class="m">2432</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:26<span class="w"> </span>firefox-ios
-drwxr-xr-x<span class="w">  </span><span class="m">77</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">      </span><span class="m">2464</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:46<span class="w"> </span>firefox-ios-BACKUP
-</code></pre></div></p>
-<p>Use <code>firefox-ios</code> for your pipeline or Xcode.</p>
+<h2 id="option-2-ad-hoc-ipa">Option 2: Ad-Hoc IPA</h2>
+<p>App can be distributed directly as <strong>IPA</strong> with two options for signing</p>
+<h3 id="distribution-process_1">Distribution Process</h3>
+<details>
+  <summary>1. <i>Client</i>: Build PS-injected app and export it as Ad-Hoc</summary>
+Product → Archive
+
+  ![image](https://user-images.githubusercontent.com/80590/233219394-d0bfe1bc-08ca-4d84-8f32-50f4b803709c.png)
+
+Window → Organizer
+![image](https://user-images.githubusercontent.com/80590/233219478-dfca5016-a4cd-45dc-80bc-d2ce97fa02d9.png)
+
+Distribute App → Ad-Hoc
+![image](https://user-images.githubusercontent.com/80590/233219560-9a10ba0c-8182-4348-b7be-fadba787fe62.png)
+</details>
+
+<ol>
+<li><em>Client</em>: Send exported <strong>IPA</strong> to PS</li>
+</ol>
+<h3 id="signing-options">Signing Options</h3>
+<h4 id="best-option-add-ps-devices-to-apple-development-account">Best Option: Add PS Devices to Apple Development Account</h4>
+<p>App can be distributed directly as <strong>IPA</strong> and installed on device if device’s <strong>UUID</strong> is added to Apple Development account.</p>
+<ol>
+<li><em>PS</em>: Send employee devices <strong>UUIDs</strong></li>
+<li><em>Client</em>: Add device to company’s devices list: <a href="https://developer.apple.com/account/resources/devices/list">https://developer.apple.com/account/resources/devices/list</a></li>
+</ol>
+<p><em>Limitations:</em> Apple Development allows only 100 added devices simultaneously. </p>
+<h4 id="risky-option-re-signing-ipa-after-build">Risky Option: Re-Signing IPA After Build</h4>
+<p>In most cases an <strong>IPA</strong> can be re-signed with another Apple Development account after build, but this process is not guaranteed to work. <em>We don’t recommend to use it.</em></p>
 
 
 
