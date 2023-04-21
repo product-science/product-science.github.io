@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://github.com/product-science/docs/</loc>
+         <loc>https://docs.productscience.app/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/product-science/docs/android/cicd/</loc>
+         <loc>https://docs.productscience.app/android/cicd/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/product-science/docs/android/gradle/</loc>
+         <loc>https://docs.productscience.app/android/gradle/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/product-science/docs/android/user-flow/</loc>
+         <loc>https://docs.productscience.app/android/user-flow/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/product-science/docs/ios/distribution/</loc>
+         <loc>https://docs.productscience.app/ios/distribution/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/product-science/docs/ios/xcode/</loc>
+         <loc>https://docs.productscience.app/ios/xcode/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
