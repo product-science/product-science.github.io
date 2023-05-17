@@ -16,10 +16,10 @@
         <link rel="prev" href="../../android/user-flow/">
       
       
-        <link rel="next" href="../distribution/">
+        <link rel="next" href="../bazel/">
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
@@ -458,6 +458,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -591,6 +593,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bazel/" class="md-nav__link">
+        Build / Bazel
+      </a>
     </li>
   
 
@@ -743,7 +759,7 @@
   
 
 
-<h1 id="ios-build-instructions-xcode">iOS Build Instructions - Xcode</h1>
+<div><h1 id="ios-build-instructions-xcode">iOS Build Instructions - Xcode</h1>
 <h3 id="1-configure-productscienceyaml">1. Configure <code>productscience.yaml</code></h3>
 <p>Put this file into root of build directory</p>
 <p><em>This step is not needed if you use standalone build.</em></p>
@@ -756,44 +772,44 @@
 <span class="w">    </span>-sdk<span class="w"> </span>iphoneos
 </code></pre></div>
 <p>For <code>xcodeproj</code> based projects:  </p>
-<p><div class="highlight"><pre><span></span><code>xcodebuild<span class="w"> </span><span class="se">\</span>
+<p></p><div class="highlight"><pre><span></span><code>xcodebuild<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-project<span class="w"> </span>MyApp.xcodeproj<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-scheme<span class="w"> </span>MyAppScheme<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-sdk<span class="w"> </span>iphoneos
 </code></pre></div>
 Ensure that your app can build successfully before using the <code>PSCliCodeInjector</code>.
-A reference example using the Firefox Fennec iOS app is shown below.</p>
+A reference example using the Firefox Fennec iOS app is shown below.
 <h3 id="3-install-pstools-instrumentation-injection-kit">3. Install <code>PSTools</code> Instrumentation Injection Kit</h3>
 <p>You will need to use the github credentials supplied by PSi to above to follow these steps:</p>
 <ol>
 <li>Download the latest PSTools-PLATFORM.zip from our <a href="https://github.com/product-science/PSios/releases">public plugin repo</a> and unzip it  </li>
 <li>Install PSTools/PSCliCodeInjector.pkg on your Mac with double-click  </li>
-<li>Copy PSTools/PSKit to ps-workdir i.e.<br />
+<li>Copy PSTools/PSKit to ps-workdir i.e.<br>
 <code>cp -r PSTools/PSKit .</code></li>
 </ol>
 <p>See the Firefox example below for sample final directory structure.</p>
-<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br />
+<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br>
 <code>MyAppPSi0.9.1.ipa</code> 
 <strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
 <h3 id="4-build">4. Build</h3>
 <ul>
 <li>
-<p>Ensure that the <code>PSKit</code> tool folder is at the same folder level as your project i.e.:<br />
-<div class="highlight"><pre><span></span><code>drwxr-xr-x@  5 user  staff       160 Jul 12 16:24 PSKit
+<p>Ensure that the <code>PSKit</code> tool folder is at the same folder level as your project i.e.:<br>
+</p><div class="highlight"><pre><span></span><code>drwxr-xr-x@  5 user  staff       160 Jul 12 16:24 PSKit
 drwxr-xr-x@  6 user  staff       192 Jul  5 10:22 PSTools
 drwxr-xr-x  76 user  staff      2432 Jul 12 16:26 MyApp
-</code></pre></div></p>
+</code></pre></div>
 </li>
 <li>
-<p>Run PSTool code transformation and configuration fine-tuning. The <code>PSCliCodeInjector</code> command must be run at the folder level above where the <code>.xcodeproj</code> sits and run against that folder. For example, if the project is <code>./MyApp/MyApp.xcodeproj</code> then from the <code>.</code> level folder run:<br />
-<div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>MyApp<span class="w"> </span><span class="se">\</span>
+<p>Run PSTool code transformation and configuration fine-tuning. The <code>PSCliCodeInjector</code> command must be run at the folder level above where the <code>.xcodeproj</code> sits and run against that folder. For example, if the project is <code>./MyApp/MyApp.xcodeproj</code> then from the <code>.</code> level folder run:<br>
+</p><div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>MyApp<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--backup-dir<span class="w"> </span>MyApp-BACKUP<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--sub-folders<span class="o">=</span>.<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--console-build-command<span class="o">=</span><span class="s2">&quot;&lt;BUILD-COMMAND-FROM_STEP-3&gt;&quot;</span>
-</code></pre></div></p>
+<span class="w">    </span>--console-build-command<span class="o">=</span><span class="s2">"&lt;BUILD-COMMAND-FROM_STEP-3&gt;"</span>
+</code></pre></div>
 </li>
 </ul>
-<p>This step transforms the code of within the <code>MyApp</code> project folder.<br />
+<p>This step transforms the code of within the <code>MyApp</code> project folder.<br>
 A backup of the original <code>./MyApp</code> will be created at the same folder level where injection is run i.e. <code>./MyApp-BACKUP</code>.</p>
 <p>The <strong>BUILD-COMMAND-FROM_STEP-2</strong> is the choice between the xcworkspace or xcodeproj methods and their associated flags. These are examples of xcodebuild templates- yours may differ. See the Firefox app example below.</p>
 <p>⚠️ Warning: <em>PSCliCodeInjector parses the command’s output to identify issues with the injected code. Be sure not to pipe the build’s results through tools like xcbeautify, xcpretty, etc. or this logic might not work correctly.</em></p>
@@ -803,7 +819,7 @@ A backup of the original <code>./MyApp</code> will be created at the same folder
 <li>Build and export the app in your default pipeline.</li>
 <li>Send us MyApp/psfilter.txt if it exists</li>
 </ul>
-<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br />
+<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br>
 <code>MyAppPSi0.9.1.ipa</code> 
 <strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
 <h3 id="5-distribute-build">5. Distribute Build</h3>
@@ -817,17 +833,17 @@ A backup of the original <code>./MyApp</code> will be created at the same folder
 <div class="highlight"><pre><span></span><code>xcodebuild<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-project<span class="w"> </span>Client.xcodeproj<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-scheme<span class="w"> </span>Fennec<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-destination<span class="w"> </span><span class="s1">&#39;name=iPhone 13 mini&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-destination<span class="w"> </span><span class="s1">'name=iPhone 13 mini'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-sdk<span class="w"> </span>iphoneos
 </code></pre></div>
 <p>Note this example uses <code>iPhone 13 mini</code> as the example destination- this can be changed.</p>
 <h3 id="3-create-creds-and-install-pstools">3. Create Creds and install PStools</h3>
 <p>Create the <code>productscience.yaml</code> file in the <code>firefox-ios</code> directory as shown in Step 2 above.</p>
 <p>Download, unzip, and install <code>PStools</code> as shown in Step 4 above.</p>
-<p>Make sure that the <code>PSKit</code> is in the same top level directory level as <code>firefox-ios</code>:<br />
-<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-r<span class="w"> </span>PSTools/PSKit<span class="w"> </span>.
+<p>Make sure that the <code>PSKit</code> is in the same top level directory level as <code>firefox-ios</code>:<br>
+</p><div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-r<span class="w"> </span>PSTools/PSKit<span class="w"> </span>.
 </code></pre></div>
- i.e.</p>
+ i.e.
 <div class="highlight"><pre><span></span><code>drwxr-xr-x@<span class="w">  </span><span class="m">5</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">160</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:24<span class="w"> </span>PSKit
 drwxr-xr-x@<span class="w">  </span><span class="m">6</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">192</span><span class="w"> </span>Jul<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">10</span>:22<span class="w"> </span>PSTools
 drwxr-xr-x<span class="w">  </span><span class="m">76</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">      </span><span class="m">2432</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:26<span class="w"> </span>firefox-ios
@@ -842,19 +858,19 @@ drwxr-xr-x<span class="w">  </span><span class="m">76</span><span class="w"> </s
 <div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>firefox-ios<span class="w"> </span>--backup-dir<span class="w"> </span>firefox-ios-BACKUP<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--sub-folders<span class="o">=</span>.<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--console-build-command<span class="o">=</span><span class="se">\</span>
-<span class="w">      </span><span class="s2">&quot;xcodebuild \</span>
+<span class="w">      </span><span class="s2">"xcodebuild \</span>
 <span class="s2">          -project Client.xcodeproj \</span>
 <span class="s2">          -scheme Fennec \</span>
-<span class="s2">          -destination &#39;name=iPhone 13 mini&#39; \</span>
-<span class="s2">          -sdk iphoneos&quot;</span>
+<span class="s2">          -destination 'name=iPhone 13 mini' \</span>
+<span class="s2">          -sdk iphoneos"</span>
 </code></pre></div>
 <p>When complete, the <code>firefox-ios</code> directory will have been transformed. <code>firefox-ios-BACKUP</code> is a directory with original project.
-<div class="highlight"><pre><span></span><code>drwxr-xr-x@<span class="w">  </span><span class="m">5</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">160</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:24<span class="w"> </span>PSKit
+</p><div class="highlight"><pre><span></span><code>drwxr-xr-x@<span class="w">  </span><span class="m">5</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">160</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:24<span class="w"> </span>PSKit
 drwxr-xr-x@<span class="w">  </span><span class="m">6</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">       </span><span class="m">192</span><span class="w"> </span>Jul<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">10</span>:22<span class="w"> </span>PSTools
 drwxr-xr-x<span class="w">  </span><span class="m">76</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">      </span><span class="m">2432</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:26<span class="w"> </span>firefox-ios
 drwxr-xr-x<span class="w">  </span><span class="m">77</span><span class="w"> </span>user<span class="w">  </span>staff<span class="w">      </span><span class="m">2464</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">16</span>:46<span class="w"> </span>firefox-ios-BACKUP
-</code></pre></div></p>
-<p>Use <code>firefox-ios</code> for your pipeline or Xcode.</p>
+</code></pre></div>
+<p>Use <code>firefox-ios</code> for your pipeline or Xcode.</p></div>
 
 
 
@@ -919,7 +935,7 @@ drwxr-xr-x<span class="w">  </span><span class="m">77</span><span class="w"> </s
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>

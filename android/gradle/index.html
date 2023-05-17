@@ -19,7 +19,7 @@
         <link rel="next" href="../cicd/">
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
@@ -541,6 +541,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -563,6 +565,20 @@
     <li class="md-nav__item">
       <a href="../../ios/xcode/" class="md-nav__link">
         Build / Xcode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/bazel/" class="md-nav__link">
+        Build / Bazel
       </a>
     </li>
   
@@ -689,19 +705,19 @@
   
 
 
-<h1 id="gradle-build-instructions-android">Gradle Build Instructions - Android</h1>
+<div><h1 id="gradle-build-instructions-android">Gradle Build Instructions - Android</h1>
 <h2 id="1-credentials">1. Credentials</h2>
 <p>Product Science shared access credentials (<code>productscience.properties</code> file) via Bitwarden sent. 
 Please place it in the root directory of your project.</p>
 <h2 id="2-add-product-science-maven-repository">2. Add Product Science maven repository</h2>
 <p>In <code>build.gradle</code> add the maven build info to the repositories for project and subprojects:  </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Groovy</label><label for="__tabbed_1_2">Kotlin DSL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Groovy</label><label for="__tabbed_1_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://artifactory.productscience.app/releases&quot;</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">"https://artifactory.productscience.app/releases"</span>
 <span class="w">        </span><span class="o">}</span>
 <span class="w">    </span><span class="o">}</span>
 <span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
@@ -710,7 +726,7 @@ Please place it in the root directory of your project.</p>
 <span class="n">allprojects</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://artifactory.productscience.app/releases&quot;</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">"https://artifactory.productscience.app/releases"</span>
 <span class="w">        </span><span class="o">}</span>
 <span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
@@ -720,7 +736,7 @@ Please place it in the root directory of your project.</p>
 <div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">&quot;https://artifactory.productscience.app/releases&quot;</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">"https://artifactory.productscience.app/releases"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
@@ -729,7 +745,7 @@ Please place it in the root directory of your project.</p>
 <span class="n">allprojects</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">&quot;https://artifactory.productscience.app/releases&quot;</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">"https://artifactory.productscience.app/releases"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -738,7 +754,7 @@ Please place it in the root directory of your project.</p>
 </div>
 </div>
 <p>If the project is configured to prefer settings repositories maven source should be added to settings file:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Groovy</label><label for="__tabbed_2_2">Kotlin DSL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Groovy</label><label for="__tabbed_2_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">settings.gradle</span><pre><span></span><code><span class="o">...</span>
@@ -746,7 +762,7 @@ Please place it in the root directory of your project.</p>
 <span class="w">    </span><span class="n">repositoriesMode</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">RepositoriesMode</span><span class="o">.</span><span class="na">FAIL_ON_PROJECT_REPOS</span><span class="o">)</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://artifactory.productscience.app/releases&quot;</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">"https://artifactory.productscience.app/releases"</span>
 <span class="w">        </span><span class="o">}</span>
 <span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
@@ -758,7 +774,7 @@ Please place it in the root directory of your project.</p>
 <span class="w">    </span><span class="n">repositoriesMode</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">RepositoriesMode</span><span class="p">.</span><span class="na">FAIL_ON_PROJECT_REPOS</span><span class="p">)</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">&quot;https://artifactory.productscience.app/releases&quot;</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">"https://artifactory.productscience.app/releases"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -768,14 +784,14 @@ Please place it in the root directory of your project.</p>
 </div>
 <p>In another case, if <code>allprojects</code> is not present in top level <code>build.gradle</code> then add it in the top of the file.  </p>
 <h2 id="3-add-product-science-plugin-to-classpath">3. Add Product Science plugin to <code>classpath</code></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Groovy</label><label for="__tabbed_3_2">Kotlin DSL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Groovy</label><label for="__tabbed_3_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
 <span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer:transformer-plugin:0.16.28&quot;</span>
-<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer:transformer-instrumentation:0.16.28&quot;</span>
+<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">"com.productscience.transformer:transformer-plugin:0.16.28"</span>
+<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">"com.productscience.transformer:transformer-instrumentation:0.16.28"</span>
 <span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
 <span class="o">...</span>
@@ -785,8 +801,8 @@ Please place it in the root directory of your project.</p>
 <div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer:transformer-plugin:0.16.28&quot;</span><span class="p">)</span>
-<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer:transformer-instrumentation:0.16.28&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">"com.productscience.transformer:transformer-plugin:0.16.28"</span><span class="p">)</span>
+<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">"com.productscience.transformer:transformer-instrumentation:0.16.28"</span><span class="p">)</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="p">...</span>
@@ -794,27 +810,27 @@ Please place it in the root directory of your project.</p>
 </div>
 </div>
 </div>
-<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br />
+<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br>
 <code>MyAppPSi0.9.1.apk</code> 
 <strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
 <h2 id="4-apply-the-product-science-plugin">4. Apply the Product Science Plugin</h2>
 <p>Apply plugin to <code>app/build.gradle</code>  </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Groovy</label><label for="__tabbed_4_2">Kotlin DSL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Groovy</label><label for="__tabbed_4_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;com.android.application&quot;</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;kotlin-android&quot;</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">"com.android.application"</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">"kotlin-android"</span>
 <span class="o">}</span>
-<span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer.plugin&quot;</span>
+<span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">"com.productscience.transformer.plugin"</span>
 <span class="o">...</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">app/build.gradle.kts</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;kotlin-android&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer.plugin&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"com.android.application"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"kotlin-android"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"com.productscience.transformer.plugin"</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="p">...</span>
 </code></pre></div>
@@ -831,26 +847,26 @@ To achieve it add the next line to the R8/ProGuard configuration file: </p>
 <a href="https://developer.android.com/studio/build/shrink-code">https://developer.android.com/studio/build/shrink-code</a></p>
 <h2 id="6-build-your-app">6. Build your app</h2>
 <p>Now you can build your app with Gradle, i.e.:
-<div class="highlight"><pre><span></span><code>./gradlew<span class="w"> </span>assemble
-</code></pre></div></p>
-<p><strong>Please label your build with the Plugin Version from above i.e.</strong><br />
+</p><div class="highlight"><pre><span></span><code>./gradlew<span class="w"> </span>assemble
+</code></pre></div>
+<p><strong>Please label your build with the Plugin Version from above i.e.</strong><br>
 <code>MyApp_PSi-0.14.2.apk</code> 
 <strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
-<hr />
+<hr>
 <h2 id="enabling-the-plugin-by-build-type">Enabling the plugin by build type</h2>
 <p>For plugin versions greater than <strong>0.12.1</strong>, 
 you can integrate Product Science pipeline into your gradle build 
 selectively apply the plugin to a given build type by adding a <code>productScience</code> block 
 at the top level of your <code>app/build.gradle</code> file. </p>
 <p>Inside the proguard block, add a block corresponding to the build type (must have the same name) and set <code>enabled</code> to <code>true</code>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Groovy</label><label for="__tabbed_5_2">Kotlin DSL</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Groovy</label><label for="__tabbed_5_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;com.android.application&quot;</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">&quot;kotlin-android&quot;</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">"com.android.application"</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">"kotlin-android"</span>
 <span class="o">}</span>
-<span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">&quot;com.productscience.transformer.plugin&quot;</span><span class="w"> </span>
+<span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">"com.productscience.transformer.plugin"</span><span class="w"> </span>
 <span class="n">productScience</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">psiRelease</span><span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="n">enabled</span><span class="w"> </span><span class="kc">true</span>
@@ -872,13 +888,13 @@ at the top level of your <code>app/build.gradle</code> file. </p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">app/build.gradle.kts</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.android.application&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;kotlin-android&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.productscience.transformer.plugin&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"com.android.application"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"kotlin-android"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"com.productscience.transformer.plugin"</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="n">productScience</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">create</span><span class="p">(</span><span class="s">&quot;psiRelease&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">create</span><span class="p">(</span><span class="s">"psiRelease"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">isEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -886,11 +902,11 @@ at the top level of your <code>app/build.gradle</code> file. </p>
 <span class="n">android</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="p">...</span>
 <span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">create</span><span class="p">(</span><span class="s">&quot;psiRelease&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">create</span><span class="p">(</span><span class="s">"psiRelease"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">isMinifyEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="n">getByName</span><span class="p">(</span><span class="s">&quot;release&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">getByName</span><span class="p">(</span><span class="s">"release"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">isMinifyEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
@@ -901,7 +917,7 @@ at the top level of your <code>app/build.gradle</code> file. </p>
 </div>
 <p>If the <code>productScience</code> block is missing or empty, the plugin will be applied to all build types.
 If one or more build types appear in the <code>productScience</code> block,
-the plugin will be applied only to those build types that have <code>enabled</code> set to true. </p>
+the plugin will be applied only to those build types that have <code>enabled</code> set to true. </p></div>
 
 
 
@@ -966,7 +982,7 @@ the plugin will be applied only to those build types that have <code>enabled</co
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>

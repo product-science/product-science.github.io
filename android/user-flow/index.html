@@ -19,7 +19,7 @@
         <link rel="next" href="../../ios/xcode/">
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
@@ -567,6 +567,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -589,6 +591,20 @@
     <li class="md-nav__item">
       <a href="../../ios/xcode/" class="md-nav__link">
         Build / Xcode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/bazel/" class="md-nav__link">
+        Build / Bazel
       </a>
     </li>
   
@@ -741,14 +757,14 @@
   
 
 
-<h1 id="manual-annotation-for-user-flows">Manual Annotation for User Flows</h1>
+<div><h1 id="manual-annotation-for-user-flows">Manual Annotation for User Flows</h1>
 <p>In addition to automatically instrumenting your app, the Product Science SDK provides a <code>userflow</code> library that enables manual annotation of user flows in your code. 
 This can be useful for tracking and comparing timing changes between specific events across traces.</p>
 <p>The steps to add and use the library are below.</p>
 <h2 id="dependencies">Dependencies</h2>
 <p>Add the userflow library as a dependency in <code>app/build.gradle</code></p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;com.productscience.userflow:userflow:0.16.28&quot;</span>
+<span class="w">        </span><span class="n">implementation</span><span class="w"> </span><span class="s2">"com.productscience.userflow:userflow:0.16.28"</span>
 <span class="w">    </span><span class="o">}</span>
 </code></pre></div>
 <h2 id="annotation-process">Annotation Process</h2>
@@ -761,20 +777,20 @@ This can be useful for tracking and comparing timing changes between specific ev
 <p>Each of these methods take an integer argument (UserFlow ID) and a nullable String argument (comment).</p>
 <h3 id="1-starting-a-userflow">1. Starting a UserFlow</h3>
 <p>To start a UserFlow, call <code>UserFlow#start</code> and pass it an ID and a String message.
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">start</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;App start begins&quot;</span><span class="p">)</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">start</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"App start begins"</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="2-annotations-userflows-milestones">2. Annotations UserFlow's milestones</h3>
 <p>While a UserFlow is in progress, you can make calls to <code>UserFlow#custom</code> passing the UserFlow ID and a String message. 
 This can be useful to annotate events along the UserFlow (e.g., reaching a milestone or annotating different conditional paths among others).
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">custom</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;UserFlow hit milestone&quot;</span><span class="p">)</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">custom</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"UserFlow hit milestone"</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="3-ending-a-userflow">3. Ending a UserFlow</h3>
 <p>To end a UserFlow, call <code>UserFlow#end</code> passing the ID of the UserFlow to end and a String message.
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">end</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;App start complete&quot;</span><span class="p">)</span>
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">end</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"App start complete"</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="examples">Examples</h2>
 <h3 id="userflow-annotations-on-pstool">UserFlow Annotations on PSTool</h3>
-<p><img alt="trace" src="../../images/userflow-trace.png" /></p>
+<p><img alt="trace" src="../../images/userflow-trace.png"></p>
 <h3 id="sample-app">Sample app</h3>
 <p>There is a sample app demonstrating the use of the userflow library at:
 <a href="https://github.com/product-science/demoapps-private/tree/main/Android/userflow-android-example">https://github.com/product-science/demoapps-private/tree/main/Android/userflow-android-example</a></p>
@@ -782,7 +798,7 @@ This can be useful to annotate events along the UserFlow (e.g., reaching a miles
 <p>By default, UserFlow Annotations are added to traces only when Product Science plugin is applied.
 To annotate user flows without applying the plugin, call <code>UserFlow#setAlwaysAnnotate(true)</code>.   </p>
 <p><em>CAUTION</em>: using this method can enable unwanted annotations in production builds.
-You will have to take steps to ensure that UserFlow annotations are only called where appropriate.</p>
+You will have to take steps to ensure that UserFlow annotations are only called where appropriate.</p></div>
 
 
 
@@ -847,7 +863,7 @@ You will have to take steps to ensure that UserFlow annotations are only called 
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   </body>
