@@ -776,6 +776,12 @@ Instructions for installation can be found on the project's <a href="https://git
 <p class="admonition-title">Important</p>
 <p>When you want to create an instrumented build, be sure to use the original project directory and not the backup directory.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>The code changes made by <code>PSCliCodeInjector</code> result in a large number of compile-time warnings, which can cause build failure if Bazel's max stdout/stderr log size is exceeded. To prevent this, include the following option in your <code>bazel build</code> command:
+</p><div class="highlight"><pre><span></span><code>--experimental_ui_max_stdouterr_bytes=-1
+</code></pre></div>
+</div>
 <h3 id="basic-use">Basic use</h3>
 <div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>&lt;root-directory&gt;<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--console-build-command<span class="w"> </span><span class="s2">"&lt;console-build-command&gt;"</span>
