@@ -582,6 +582,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#changing-the-configuration-archive-path-offline-compatible-builds-only" class="md-nav__link">
+    Changing the configuration archive path (offline-compatible builds only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-options" class="md-nav__link">
     Other options
   </a>
@@ -747,6 +754,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#changing-the-configuration-archive-path-offline-compatible-builds-only" class="md-nav__link">
+    Changing the configuration archive path (offline-compatible builds only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-options" class="md-nav__link">
     Other options
   </a>
@@ -820,14 +834,15 @@
 <div><h1 id="ios-build-instructions-xcode">iOS Build Instructions - Xcode</h1>
 <p>The following instructions describe how to add Product Science instrumentation to an iOS application that is built using Xcode. Bazel-specific instructions can be found <a href="../bazel/">here</a>.</p>
 <h2 id="1-copy-productscienceyaml-to-your-projects-root-directory">1. Copy <code>productscience.yaml</code> to your project's root directory</h2>
+<p><em>NOTE: If your build environment does not allow network access, then you will be provided with a 'productscience.zip' archive instead of a .yaml file. Copy the entire .zip archive to your workspace directory (do not unzip the archive).</em></p>
 <p>Product Science will provide you with a <code>productscience.yaml</code> file that contains your credentials and configuration details.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If you haven't received this file or need to request a new copy, please reach out to your designated integration support contact via established communication channel. If this contact is unavailable, send an email to support@productscience.ai for assistance.</p>
 </div>
 <p>Once you've received your <code>productscience.yaml</code> file, copy the file to your project's root directory (next to your <code>.xcodeproj</code> or <code>.xcworkspace</code>).</p>
-<p><em>This step is not needed if you use standalone offline build. PS will provide detailed instructions.</em></p>
 <h2 id="2-install-psclicodeinjector">2. Install <code>PSCliCodeInjector</code></h2>
+<p><em>NOTE: Offline builds are not hosted on our public repo. If your build environment does not allow network access, PS will work with your team to share offline-compatible builds via a private channel.</em></p>
 <p>Download the latest installer package (named <code>PSCliCodeInjector.pkg</code>) from our <a href="https://github.com/product-science/PSios/releases">public plugin repo</a>.</p>
 <p>Double-click the downloaded <code>.pkg</code> to start the installation process. By default, <code>PSCliCodeInjector</code> will be installed to <code>/usr/local/bin</code>.</p>
 <p><img alt="PSCliCodeInjector installer" src="../../img/ios-installer.jpg"></p>
@@ -862,6 +877,14 @@
 </code></pre></div>
 <p>A backup of your project's root directory will be created before injection is run. By default, this backup directory is created at  <code>&lt;root-directory&gt;-BACKUP</code>.</p>
 <p>You can override the location of the backup directory by including the <code>--backup-dir</code> option with a custom directory path.</p>
+<h3 id="changing-the-configuration-archive-path-offline-compatible-builds-only">Changing the configuration archive path <em>(offline-compatible builds only)</em></h3>
+<p><em>NOTE: This option is only relevant if your build environment does not allow network access. Standard builds will load this information automatically from our API.</em></p>
+<div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>&lt;root-directory&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--console-build-command<span class="w"> </span><span class="s2">"&lt;console-build-command&gt;"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--local-config<span class="w"> </span>&lt;config-archive&gt;
+</code></pre></div>
+<p>By default, PSCliCodeInjector expects your configuration archive to be named 'productscience.zip', and to be placed in your project's root directory.</p>
+<p>If you'd prefer to keep the archive somewhere else, you can tell PSCliCodeInjector where to look by passing the archive's full path (including name) to the <code>--local-config</code> option.</p>
 <h3 id="other-options">Other options</h3>
 <p><code>PSCliCodeInjector</code> accepts several other options. Pass the <code>--help</code> flag to see the full list:</p>
 <div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>--help

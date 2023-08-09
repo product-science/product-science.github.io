@@ -603,6 +603,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#changing-the-configuration-archive-path-offline-compatible-builds-only" class="md-nav__link">
+    Changing the configuration archive path (offline-compatible builds only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-options" class="md-nav__link">
     Other options
   </a>
@@ -727,6 +734,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#changing-the-configuration-archive-path-offline-compatible-builds-only" class="md-nav__link">
+    Changing the configuration archive path (offline-compatible builds only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-options" class="md-nav__link">
     Other options
   </a>
@@ -774,6 +788,7 @@
 <p>Our examples will assume that you've cloned the repository to your home directory and kept the repository's default directory name (<code>demoapps</code>). If you decide to change either of these details, then modify the specified paths to fit your setup.</p>
 </div>
 <h2 id="1-copy-productscienceyaml-to-your-projects-workspace-directory">1. Copy <code>productscience.yaml</code> to your project's workspace directory</h2>
+<p><em>NOTE: If your build environment does not allow network access, then you will be provided with a 'productscience.zip' archive instead of a .yaml file. Copy the entire .zip archive to your workspace directory (do not unzip the archive).</em></p>
 <p>Product Science will provide you with a <code>productscience.yaml</code> file that contains your credentials and configuration details.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -798,6 +813,7 @@ project's <code>BUILD</code> files during injection.</p>
 <p>Before running <code>PSCliCodeInjector</code> for the first time, you'll need to install <code>buildozer</code> on the host computer.
 Instructions for installation can be found on the project's <a href="https://github.com/bazelbuild/buildtools/tree/master/buildozer">repository</a>.</p>
 <h2 id="3-install-psclicodeinjector">3. Install <code>PSCliCodeInjector</code></h2>
+<p><em>NOTE: Offline builds are not hosted on our public repo. If your build environment does not allow network access, PS will work with your team to share offline-compatible builds via a private channel.</em></p>
 <p>Download the latest installer package (named <code>PSCliCodeInjector.pkg</code>) from our <a href="https://github.com/product-science/PSios/releases">public plugin repo</a>.</p>
 <p>Double-click the downloaded <code>.pkg</code> to start the installation process. By default, <code>PSCliCodeInjector</code> will be installed to <code>/usr/local/bin</code>.</p>
 <p><img alt="PSCliCodeInjector installer" src="../../img/ios-installer.jpg"></p>
@@ -916,6 +932,14 @@ total<span class="w"> </span><span class="m">16</span>
 ...
 </code></pre></div>
 </details>
+<h3 id="changing-the-configuration-archive-path-offline-compatible-builds-only">Changing the configuration archive path <em>(offline-compatible builds only)</em></h3>
+<p><em>NOTE: This option is only relevant if your build environment does not allow network access. Standard builds will load this information automatically from our API.</em></p>
+<div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>&lt;root-directory&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--console-build-command<span class="w"> </span><span class="s2">"&lt;console-build-command&gt;"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--local-config<span class="w"> </span>&lt;config-archive&gt;
+</code></pre></div>
+<p>By default, PSCliCodeInjector expects your configuration archive to be named 'productscience.zip', and to be placed in your project's root directory.</p>
+<p>If you'd prefer to keep the archive somewhere else, you can tell PSCliCodeInjector where to look by passing the archive's full path (including name) to the <code>--local-config</code> option.</p>
 <h3 id="other-options">Other options</h3>
 <p><code>PSCliCodeInjector</code> accepts several other options. Pass the <code>--help</code> flag to see the full list:</p>
 <div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>--help
