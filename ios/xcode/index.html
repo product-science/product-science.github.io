@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -680,6 +680,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#injecting-package-dependencies" class="md-nav__link">
+    Injecting package dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#changing-the-configuration-archive-path-offline-compatible-builds-only" class="md-nav__link">
     Changing the configuration archive path (offline-compatible builds only)
   </a>
@@ -866,6 +873,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#injecting-package-dependencies" class="md-nav__link">
+    Injecting package dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#changing-the-configuration-archive-path-offline-compatible-builds-only" class="md-nav__link">
     Changing the configuration archive path (offline-compatible builds only)
   </a>
@@ -994,6 +1008,17 @@ If your network settings prevent adding this endpoint, you will be provided with
 </code></pre></div>
 <p>A backup of your project's root directory will be created before injection is run. By default, this backup directory is created at  <code>&lt;root-directory&gt;-BACKUP</code>.</p>
 <p>You can override the location of the backup directory by including the <code>--backup-dir</code> option with a custom directory path.</p>
+<h3 id="injecting-package-dependencies">Injecting package dependencies</h3>
+<p>If your project depends on Swift packages, you can inject them using the <code>--inject-packages</code> option. With this option, each package's source code will be downloaded and added to the project as a local package dependency. This option also requires that you specify either a target or a scheme name:</p>
+<p></p><div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>&lt;root-directory&gt;<span class="w"> </span><span class="se">\</span>
+--inject-packages<span class="w"> </span>--target-name<span class="w"> </span>&lt;target-name&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--console-build-command<span class="w"> </span><span class="s2">"&lt;console-build-command&gt;"</span>
+</code></pre></div>
+or
+<div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>&lt;root-directory&gt;<span class="w"> </span><span class="se">\</span>
+--inject-packages<span class="w"> </span>--scheme-name<span class="w"> </span>&lt;scheme-name&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--console-build-command<span class="w"> </span><span class="s2">"&lt;console-build-command&gt;"</span>
+</code></pre></div>
 <h3 id="changing-the-configuration-archive-path-offline-compatible-builds-only">Changing the configuration archive path <em>(offline-compatible builds only)</em></h3>
 <p><em><strong>NOTE:</strong> This option is only relevant if your build environment does not allow network access. Standard builds will load this information automatically from our API.</em></p>
 <div class="highlight"><pre><span></span><code>PSCliCodeInjector<span class="w"> </span>&lt;root-directory&gt;<span class="w"> </span><span class="se">\</span>
