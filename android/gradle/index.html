@@ -892,7 +892,7 @@ Copy the entire .zip archive to your workspace directory (do not unzip the archi
 <div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">"https://artifactory.productscience.app/releases"</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">"https://artifactory.productscience.app/releases"</span><span class="p">)</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
@@ -901,7 +901,7 @@ Copy the entire .zip archive to your workspace directory (do not unzip the archi
 <span class="n">allprojects</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">"https://artifactory.productscience.app/releases"</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">"https://artifactory.productscience.app/releases"</span><span class="p">)</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -930,7 +930,7 @@ Copy the entire .zip archive to your workspace directory (do not unzip the archi
 <span class="w">    </span><span class="n">repositoriesMode</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">RepositoriesMode</span><span class="p">.</span><span class="na">FAIL_ON_PROJECT_REPOS</span><span class="p">)</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s">"https://artifactory.productscience.app/releases"</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">"https://artifactory.productscience.app/releases"</span><span class="p">)</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -1010,7 +1010,7 @@ Unarchive it and put maven packages in an internal artifactory or local maven st
 <h2 id="5-add-proguard-rules">5. Add Proguard rules</h2>
 <p>If the application uses obfuscation/shrinking add a new ProGuard rule to your project.
 To achieve it add the next line to the R8/ProGuard configuration file: </p>
-<div class="highlight"><span class="filename">proguard-rules.pro.</span><pre><span></span><code>-keep class com.productscience.transformer.module.** { *; }
+<div class="highlight"><span class="filename">proguard-rules.pro</span><pre><span></span><code>-keep class com.productscience.transformer.module.** { *; }
 -keep class com.productscience.** { *; }
 </code></pre></div>
 <p>Your project may use the other proguard file name.</p>
