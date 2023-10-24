@@ -617,6 +617,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#screen-recording" class="md-nav__link">
+    Screen Recording
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -869,6 +876,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#screen-recording" class="md-nav__link">
+    Screen Recording
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -913,7 +927,66 @@ dexOptions { javaMaxHeapSize "12g" }  // build.gradle
 <h4 id="check-cache-configuration-disabled">Check Cache Configuration Disabled</h4>
 <p>Sometimes cache configuration can cause issues with instrumentation. Support currently in development</p>
 <h4 id="check-plugin-applied-to-correct-build-variant">Check Plugin Applied to Correct Build Variant</h4>
-<p>Ensure that plugin is applied to the built variant chosen in the CLI command</p></div>
+<p>Ensure that plugin is applied to the built variant chosen in the CLI command</p>
+<h2 id="screen-recording">Screen Recording</h2>
+<p>Some apps disable screen recording for security reasons.
+For Product Science plugin builds, you may want to keep screen recording enabled so that the screen recording can be synchronized to recorded traces. 
+To do this for a specific build type, it is recommended to create a boolean variable in the <code>gradle.build</code> file and use that in code to guard the toggling of the <code>Window</code> flags.</p>
+<p>For example, if you have the following code in your Activity to disable screen recording:</p>
+<div class="highlight"><pre><span></span><code>getWindow.setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE);
+</code></pre></div>
+<p>Set up the following variable in the <code>build.gradle</code> file for the app:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Groovy</label><label for="__tabbed_1_2">Kotlin DSL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="o">...</span>
+<span class="n">android</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="o">...</span>
+<span class="w">    </span><span class="n">buildFeatures</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">buildConfig</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">defaultConfig</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">buildConfigField</span><span class="w"> </span><span class="s2">"boolean"</span><span class="o">,</span><span class="w"> </span><span class="s2">"disableScreenRecording"</span><span class="o">,</span><span class="w"> </span><span class="s2">"true"</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">psiRelease</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">buildConfigField</span><span class="w"> </span><span class="s2">"boolean"</span><span class="o">,</span><span class="w"> </span><span class="s2">"disableScreenRecording"</span><span class="o">,</span><span class="w"> </span><span class="s2">"false"</span><span class="w">            </span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">release</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">buildConfigField</span><span class="w"> </span><span class="s2">"boolean"</span><span class="o">,</span><span class="w"> </span><span class="s2">"disableScreenRecording"</span><span class="o">,</span><span class="w"> </span><span class="s2">"true"</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="p">...</span>
+<span class="n">android</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">    </span><span class="n">buildFeatures</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">buildConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">defaultConfig</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">buildConfigField</span><span class="p">(</span><span class="s">"boolean"</span><span class="p">,</span><span class="w"> </span><span class="s">"disableScreenRecording"</span><span class="p">,</span><span class="w"> </span><span class="s">"true"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">buildTypes</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">psiRelease</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">buildConfigField</span><span class="p">(</span><span class="s">"boolean"</span><span class="p">,</span><span class="w"> </span><span class="s">"disableScreenRecording"</span><span class="p">,</span><span class="w"> </span><span class="s">"false"</span><span class="p">)</span><span class="w">            </span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">release</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">buildConfigField</span><span class="p">(</span><span class="s">"boolean"</span><span class="p">,</span><span class="w"> </span><span class="s">"disableScreenRecording"</span><span class="p">,</span><span class="w"> </span><span class="s">"true"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Then you can wrap the call for <code>setFlags</code> to conditionally enable screen recording for the Product Science build.</p>
+<div class="highlight"><pre><span></span><code>if (Build.Config.disableScreenRecording) {
+    getWindow.setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE);
+}
+</code></pre></div></div>
 
 
 
