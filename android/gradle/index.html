@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -491,49 +491,96 @@
       
         <li class="md-nav__item">
   <a href="#1-credentials" class="md-nav__link">
-    1. Credentials
+    <span class="md-ellipsis">
+      1. Credentials
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-add-product-science-maven-repository" class="md-nav__link">
-    2. Add Product Science maven repository
+  <a href="#2-add-product-science-maven-repository-to-root-projects-buildscript" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add Product Science maven repository to root project's buildscript
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-add-product-science-plugin-to-classpath" class="md-nav__link">
-    3. Add Product Science plugin to classpath
+  <a href="#3-add-product-science-dependencies-to-buildscript-in-root-buildgradle-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add Product Science dependencies to buildscript in root build.gradle file
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-apply-the-product-science-plugin" class="md-nav__link">
-    4. Apply the Product Science Plugin
+  <a href="#4-add-product-science-maven-repository-url-to-all-submodules" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Add Product Science maven repository url to all submodules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Add Product Science maven repository url to all submodules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-using-the-settingsgradle-to-specify-module-dependencies-requires-gradle-68-or-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 1: Using the settings.gradle to specify module dependencies (requires gradle 6.8 or later)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-using-the-allprojects-block-in-the-root-buildgradle-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 2: Using the allprojects block in the root build.gradle file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-apply-the-product-science-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Apply the Product Science Plugin
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-add-proguard-rules" class="md-nav__link">
-    5. Add Proguard rules
+  <a href="#6-add-proguard-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Add Proguard rules
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-build-your-app" class="md-nav__link">
-    6. Build your app
+  <a href="#7-build-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Build your app
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#enabling-the-plugin-by-build-type" class="md-nav__link">
-    Enabling the plugin by build type
+    <span class="md-ellipsis">
+      Enabling the plugin by build type
+    </span>
   </a>
   
 </li>
@@ -784,49 +831,96 @@
       
         <li class="md-nav__item">
   <a href="#1-credentials" class="md-nav__link">
-    1. Credentials
+    <span class="md-ellipsis">
+      1. Credentials
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-add-product-science-maven-repository" class="md-nav__link">
-    2. Add Product Science maven repository
+  <a href="#2-add-product-science-maven-repository-to-root-projects-buildscript" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add Product Science maven repository to root project's buildscript
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-add-product-science-plugin-to-classpath" class="md-nav__link">
-    3. Add Product Science plugin to classpath
+  <a href="#3-add-product-science-dependencies-to-buildscript-in-root-buildgradle-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Add Product Science dependencies to buildscript in root build.gradle file
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-apply-the-product-science-plugin" class="md-nav__link">
-    4. Apply the Product Science Plugin
+  <a href="#4-add-product-science-maven-repository-url-to-all-submodules" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Add Product Science maven repository url to all submodules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Add Product Science maven repository url to all submodules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-using-the-settingsgradle-to-specify-module-dependencies-requires-gradle-68-or-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 1: Using the settings.gradle to specify module dependencies (requires gradle 6.8 or later)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-using-the-allprojects-block-in-the-root-buildgradle-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 2: Using the allprojects block in the root build.gradle file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-apply-the-product-science-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Apply the Product Science Plugin
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-add-proguard-rules" class="md-nav__link">
-    5. Add Proguard rules
+  <a href="#6-add-proguard-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Add Proguard rules
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-build-your-app" class="md-nav__link">
-    6. Build your app
+  <a href="#7-build-your-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Build your app
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#enabling-the-plugin-by-build-type" class="md-nav__link">
-    Enabling the plugin by build type
+    <span class="md-ellipsis">
+      Enabling the plugin by build type
+    </span>
   </a>
   
 </li>
@@ -850,23 +944,24 @@
 
 
 <div><h1 id="gradle-build-instructions-android">Gradle Build Instructions - Android</h1>
-<p>The following instructions describe how to add Product Science instrumentation to an Android application build with Gradle.</p>
+<p>These instructions guide you through the process of integrating Product Science instrumentation into an Android application's Gradle build process.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If your build environment does not allow network access to our servers <code>https://prod.productscience.app/api/v1/*</code>, please add to your allowlist.
 If your network settings prevent adding this endpoint, you will be provided with plugin and config archives detailed in sections below.</p>
 </div>
 <h2 id="1-credentials">1. Credentials</h2>
-<p>Product Science shared access credentials (<code>productscience.properties</code> file) via Bitwarden sent. 
-Please place it in the root directory of your project.</p>
+<p>Product Science has shared access credentials via BitWarden as the <strong>productscience.properties</strong> file.<br>
+Place the <strong>productscience.properties</strong> file in the root director of your project.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If your build environment does not allow network access to our servers as specified above, 
 you will be provided with a 'productscience.config.N.zip' archive instead of a .properties file.<br>
 Copy the entire .zip archive to your workspace directory (do not unzip the archive).</p>
 </div>
-<h2 id="2-add-product-science-maven-repository">2. Add Product Science maven repository</h2>
-<p>In <code>build.gradle</code> add the PS maven artifactory to the repositories for project and subprojects:  </p>
+<h2 id="2-add-product-science-maven-repository-to-root-projects-buildscript">2. Add Product Science maven repository to root project's <code>buildscript</code></h2>
+<p>In the root level <strong>build.gradle</strong> file, add the productscience maven url to the <code>repositories</code> inside of the <code>buildscript</code> block.
+If you do not have a <code>buildscript</code> block in the file, you can add one at the top level.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Groovy</label><label for="__tabbed_1_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -877,14 +972,6 @@ Copy the entire .zip archive to your workspace directory (do not unzip the archi
 <span class="w">        </span><span class="o">}</span>
 <span class="w">    </span><span class="o">}</span>
 <span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
-<span class="o">}</span>
-
-<span class="n">allprojects</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">"https://artifactory.productscience.app/releases"</span>
-<span class="w">        </span><span class="o">}</span>
-<span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
 </div>
@@ -897,25 +984,56 @@ Copy the entire .zip archive to your workspace directory (do not unzip the archi
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
-
-<span class="n">allprojects</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">"https://artifactory.productscience.app/releases"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
 </div>
-<p>If the project is configured to prefer settings repositories maven source should be added to settings file:</p>
+<h2 id="3-add-product-science-dependencies-to-buildscript-in-root-buildgradle-file">3. Add Product Science dependencies to buildscript in root <strong>build.gradle</strong> file</h2>
+<p>In the <code>buildscript</code> block of the root <strong>build.gradle</strong> file, add the classpaths for the productscience
+<code>transformer-plugin</code> and <code>transformer-instrumentation</code> artifacts:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Groovy</label><label for="__tabbed_2_2">Kotlin DSL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">"com.productscience.transformer:transformer-plugin:0.18.3"</span>
+<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">"com.productscience.transformer:transformer-instrumentation:0.18.3"</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+<span class="o">...</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">"com.productscience.transformer:transformer-plugin:0.18.3"</span><span class="p">)</span>
+<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">"com.productscience.transformer:transformer-instrumentation:0.18.3"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="p">...</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="4-add-product-science-maven-repository-url-to-all-submodules">4. Add Product Science maven repository url to all submodules</h2>
+<p>The productscience plugin will attempt to instrument all modules of the app, 
+so it is necessary to provide access to dependencies for all submodules. </p>
+<p>To achieve that, you will need to make the Product Science maven repository visible to all submodules.
+You can do this in two ways:</p>
+<ol>
+<li>Using the <code>allprojects</code> block in the root <strong>build.gradle</strong></li>
+<li>Using the <code>dependencyResolutionManagement</code> block in the <strong>settings.gradle</strong></li>
+</ol>
+<h3 id="case-1-using-the-settingsgradle-to-specify-module-dependencies-requires-gradle-68-or-later">Case 1: Using the <strong>settings.gradle</strong> to specify module dependencies (requires gradle 6.8 or later)</h3>
+<p>Add the repository url to the <code>dependencyResolutionManagement</code> block of the <strong>settings.gradle</strong> file:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Groovy</label><label for="__tabbed_3_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">settings.gradle</span><pre><span></span><code><span class="o">...</span>
 <span class="n">dependencyResolutionManagement</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">repositoriesMode</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">RepositoriesMode</span><span class="o">.</span><span class="na">FAIL_ON_PROJECT_REPOS</span><span class="o">)</span>
+<span class="w">    </span><span class="o">...</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
 <span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">"https://artifactory.productscience.app/releases"</span>
@@ -927,7 +1045,7 @@ Copy the entire .zip archive to your workspace directory (do not unzip the archi
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">settings.gradle.kts</span><pre><span></span><code><span class="p">...</span>
 <span class="n">dependencyResolutionManagement</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">repositoriesMode</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">RepositoriesMode</span><span class="p">.</span><span class="na">FAIL_ON_PROJECT_REPOS</span><span class="p">)</span>
+<span class="w">    </span><span class="p">...</span>
 <span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">"https://artifactory.productscience.app/releases"</span><span class="p">)</span>
@@ -938,59 +1056,45 @@ Copy the entire .zip archive to your workspace directory (do not unzip the archi
 </div>
 </div>
 </div>
-<p>In another case, if <code>allprojects</code> is not present in top level <code>build.gradle</code> then add it in the top of the file.  </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If your build environment does not allow network access to our servers, 
-you will be provided with an archive with a local version of PS Plugin. 
-Unarchive it and put maven packages in an internal artifactory or local maven storage (<code>~/.m2/repository/</code>).  </p>
-<p>Then add internal artifactory or local maven to the project's repositories instead of public PS artifactory:
-</p><div class="highlight"><pre><span></span><code>repositories {
-    maven {
-        url "https://company.com/artifactory"
-    }
-    mavenLocal() // If local maven is used
-}
-</code></pre></div>
-</div>
-<h2 id="3-add-product-science-plugin-to-classpath">3. Add Product Science plugin to <code>classpath</code></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Groovy</label><label for="__tabbed_3_2">Kotlin DSL</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
-<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">"com.productscience.transformer:transformer-plugin:0.18.2"</span>
-<span class="w">        </span><span class="n">classpath</span><span class="w"> </span><span class="s2">"com.productscience.transformer:transformer-instrumentation:0.18.2"</span>
-<span class="w">    </span><span class="o">}</span>
-<span class="o">}</span>
-<span class="o">...</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">buildscript</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">"com.productscience.transformer:transformer-plugin:0.18.2"</span><span class="p">)</span>
-<span class="w">        </span><span class="n">classpath</span><span class="p">(</span><span class="s">"com.productscience.transformer:transformer-instrumentation:0.18.2"</span><span class="p">)</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-<span class="p">...</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<p><strong>Please label your build with the PSi Plugin Version from above i.e.</strong><br>
-<code>MyAppPSi0.9.1.apk</code> 
-<strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
-<h2 id="4-apply-the-product-science-plugin">4. Apply the Product Science Plugin</h2>
-<p>Apply plugin to <code>app/build.gradle</code>  </p>
+<p>If this block does not exist, you can create it at the top level of your <strong>settings.gradle</strong> file.</p>
+<h3 id="case-2-using-the-allprojects-block-in-the-root-buildgradle-file">Case 2: Using the <code>allprojects</code> block in the root <strong>build.gradle</strong> file</h3>
+<p>Add the repository url to the <code>allprojects</code> block in the root <strong>build.gradle</strong> file:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Groovy</label><label for="__tabbed_4_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<div class="highlight"><span class="filename">build.gradle</span><pre><span></span><code><span class="n">allprojects</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">"https://artifactory.productscience.app/releases"</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">build.gradle.kts</span><pre><span></span><code><span class="n">allprojects</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uri</span><span class="p">(</span><span class="s">"https://artifactory.productscience.app/releases"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>If this block does not exist, you can create it at the top level of your <strong>build.gradle</strong> file.</p>
+<p><strong>Note:</strong> If you use <code>RepositoriesMode.FAIL_ON_PROJECT_REPOS</code> of <code>dependencyResolutionManagement</code> you 
+may experience a failure when one or more modules define their own repositories in their <strong>build.gradle</strong> files.<br>
+Switching the mode to <code>RepositoriesMode.PREFER_SETTINGS</code> may solve this problem.
+Alternatively, you may add the productscience maven repository url to these modules <strong>build.gradle</strong> files.</p>
+<h2 id="5-apply-the-product-science-plugin">5. Apply the Product Science Plugin</h2>
+<p>Apply the plugin in the <strong>app/build.gradle</strong> file as follows:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Groovy</label><label for="__tabbed_5_2">Kotlin DSL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">"com.android.application"</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s2">"kotlin-android"</span>
+<span class="w">    </span><span class="o">...</span>
 <span class="o">}</span>
 <span class="n">apply</span><span class="w"> </span><span class="nl">plugin:</span><span class="w"> </span><span class="s2">"com.productscience.transformer.plugin"</span>
 <span class="o">...</span>
@@ -998,8 +1102,7 @@ Unarchive it and put maven packages in an internal artifactory or local maven st
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">app/build.gradle.kts</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"com.android.application"</span><span class="p">)</span>
-<span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"kotlin-android"</span><span class="p">)</span>
+<span class="w">    </span><span class="p">...</span>
 <span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">"com.productscience.transformer.plugin"</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="p">...</span>
@@ -1007,30 +1110,28 @@ Unarchive it and put maven packages in an internal artifactory or local maven st
 </div>
 </div>
 </div>
-<h2 id="5-add-proguard-rules">5. Add Proguard rules</h2>
+<p>For correct integration, ensure the Product Science plugin is applied after all other plugins in your <strong>app/build.gradle</strong> file 
+by adding it to the bottom of the list of plugins.</p>
+<h2 id="6-add-proguard-rules">6. Add Proguard rules</h2>
 <p>If the application uses obfuscation/shrinking add a new ProGuard rule to your project.
 To achieve it add the next line to the R8/ProGuard configuration file: </p>
 <div class="highlight"><span class="filename">proguard-rules.pro</span><pre><span></span><code>-keep class com.productscience.transformer.module.** { *; }
 -keep class com.productscience.** { *; }
 </code></pre></div>
-<p>Your project may use the other proguard file name.</p>
+<p>Your project may use a different proguard file name.</p>
 <p>More information about R8/ProGuard configuration can be found here:
 <a href="https://developer.android.com/studio/build/shrink-code">https://developer.android.com/studio/build/shrink-code</a></p>
-<h2 id="6-build-your-app">6. Build your app</h2>
+<h2 id="7-build-your-app">7. Build your app</h2>
 <p>Now you can build your app with Gradle, i.e.:
 </p><div class="highlight"><pre><span></span><code>./gradlew<span class="w"> </span>assemble
 </code></pre></div>
-<p><strong>Please label your build with the Plugin Version from above i.e.</strong><br>
-<code>MyApp_PSi-0.14.2.apk</code> 
-<strong>so our AI can learn how its dynamic instrumentation is performing on the build.</strong></p>
 <hr>
 <h2 id="enabling-the-plugin-by-build-type">Enabling the plugin by build type</h2>
-<p>For plugin versions greater than <strong>0.12.1</strong>, 
-you can integrate Product Science pipeline into your gradle build 
-selectively apply the plugin to a given build type by adding a <code>productScience</code> block 
-at the top level of your <code>app/build.gradle</code> file. </p>
-<p>Inside the proguard block, add a block corresponding to the build type (must have the same name) and set <code>enabled</code> to <code>true</code>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Groovy</label><label for="__tabbed_5_2">Kotlin DSL</label></div>
+<p>If you are using a productscience plugin version greater that <strong>0.12.1</strong>, you can selectively integrate the productscience plugin into your Gradle build.
+You will do this by applying the plugin only to specific build types.</p>
+<p>To do this, insert a <code>productScience</code> block at the top of your <strong>app/build.gradle</strong> file. 
+Inside the proguard block, add a block corresponding to the build type (must have the same name) and set <code>enabled</code> to <code>true</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Groovy</label><label for="__tabbed_6_2">Kotlin DSL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">app/build.gradle</span><pre><span></span><code><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
@@ -1155,7 +1256,7 @@ the plugin will be applied only to those build types that have <code>enabled</co
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
