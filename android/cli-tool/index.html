@@ -545,13 +545,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-clean-build-directory-and-run-jar" class="md-nav__link">
+  <a href="#2-download-cli-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Clean Build Directory and Run .jar
+      2. Download CLI Tool
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Clean Build Directory and Run .jar">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-clean-build-directory-and-run-jar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clean Build Directory and Run .jar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Clean Build Directory and Run .jar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -578,9 +587,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-share-apk-and-ps-output-directory" class="md-nav__link">
+  <a href="#4-share-apk-and-ps-output-directory" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Share .apk and ps-output Directory
+      4. Share .apk and ps-output Directory
     </span>
   </a>
   
@@ -806,13 +815,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-clean-build-directory-and-run-jar" class="md-nav__link">
+  <a href="#2-download-cli-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Clean Build Directory and Run .jar
+      2. Download CLI Tool
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Clean Build Directory and Run .jar">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-clean-build-directory-and-run-jar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Clean Build Directory and Run .jar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Clean Build Directory and Run .jar">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -839,9 +857,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-share-apk-and-ps-output-directory" class="md-nav__link">
+  <a href="#4-share-apk-and-ps-output-directory" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Share .apk and ps-output Directory
+      4. Share .apk and ps-output Directory
     </span>
   </a>
   
@@ -866,9 +884,12 @@
 
 
 <div><h1 id="cli-tool-integration-instructions-android">CLI Tool Integration Instructions - Android</h1>
+<p>The CLI tool is a small wrapper around gradlew build command that reads build output and filters unsupported classes in Product Science instrumentation. It will build the specified release in a loop until successful.</p>
 <h2 id="1-gradle-setup">1. Gradle Setup</h2>
 <p>First follow <a href="../gradle/">Gradle Instructions</a> up to step 6: Build your app (this will be used after integration) to setup build environment</p>
-<h2 id="2-clean-build-directory-and-run-jar">2. Clean Build Directory and Run .jar</h2>
+<h2 id="2-download-cli-tool">2. Download CLI Tool</h2>
+<p>Download the CLI tool .jar from our Artifactory: <a href="https://artifactory.productscience.app/releases/com/productscience/integration/integration-cli/0.18.4/integration-cli-0.18.4.jar">Download here</a></p>
+<h2 id="3-clean-build-directory-and-run-jar">3. Clean Build Directory and Run .jar</h2>
 <p>integration-cli is a CLI on top of Gradle which automates integration with the PS Plugin by receiving your regular gradle build command as input. Please use flag <em>--stacktrace</em> together with gradle command.</p>
 <h4 id="1-we-recommend-cleaning-your-project-before-starting">1. We recommend cleaning your project before starting:</h4>
 <div class="highlight"><pre><span></span><code>rm -rf ./**/build
@@ -879,7 +900,7 @@
 If you build the project with <code>./gradlew assembleRelease</code> your integration-cli command will look like:
 </p><div class="highlight"><pre><span></span><code>java -jar integration-cli.jar "./gradlew assembleRelease --stacktrace"
 </code></pre></div>
-<h2 id="3-share-apk-and-ps-output-directory">3. Share .apk and ps-output Directory</h2>
+<h2 id="4-share-apk-and-ps-output-directory">4. Share .apk and ps-output Directory</h2>
 <p>Upload to Google Drive (or sharing service of your choice) and share with us</p></div>
 
 
