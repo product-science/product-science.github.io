@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -966,19 +966,27 @@ This can be useful for tracking and comparing timing changes between specific ev
 <li><code>UserFlow#custom</code></li>
 <li><code>UserFlow#end</code></li>
 </ul>
-<p>Each of these methods take an integer argument (UserFlow ID) and a nullable String argument (comment).</p>
+<p>Each of these methods takes a string argument (UserFlow ID) and a nullable String argument (comment message).</p>
+<p>Import UserFlow class.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nn">com.productscience.userflow.v2.UserFlow;</span>
+</code></pre></div>
 <h3 id="1-starting-a-userflow">1. Starting a UserFlow</h3>
-<p>To start a UserFlow, call <code>UserFlow#start</code> and pass it an ID and a String message.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">start</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"App start begins"</span><span class="p">)</span>
+<p>To start a UserFlow, call <code>UserFlow#start</code> and pass it an ID and a String message.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">start</span><span class="p">(</span><span class="s">"appStart"</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// or</span>
+<span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">start</span><span class="p">(</span><span class="s">"appStart"</span><span class="p">,</span><span class="w"> </span><span class="s">"Comment message"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="2-annotations-userflows-milestones">2. Annotations UserFlow's milestones</h3>
-<p>While a UserFlow is in progress, you can make calls to <code>UserFlow#custom</code> passing the UserFlow ID and a String message. 
-This can be useful to annotate events along the UserFlow (e.g., reaching a milestone or annotating different conditional paths among others).
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">custom</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"UserFlow hit milestone"</span><span class="p">)</span>
+<p>While a UserFlow is in progress, you can make calls to <code>UserFlow#custom</code> passing the UserFlow ID and a String message. </p>
+<p>This can be useful to annotate events along the UserFlow (e.g., reaching a milestone or annotating different conditional paths among others).</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">custom</span><span class="p">(</span><span class="s">"appStart"</span><span class="p">,</span><span class="w"> </span><span class="s">"UserFlow hit a milestone"</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="3-ending-a-userflow">3. Ending a UserFlow</h3>
-<p>To end a UserFlow, call <code>UserFlow#end</code> passing the ID of the UserFlow to end and a String message.
-</p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">end</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">"App start complete"</span><span class="p">)</span>
+<p>To end a UserFlow, call <code>UserFlow#end</code> passing the ID of the UserFlow to end and an optional String message.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">end</span><span class="p">(</span><span class="s">"appStart"</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// or</span>
+<span class="w">    </span><span class="n">UserFlow</span><span class="p">.</span><span class="na">end</span><span class="p">(</span><span class="s">"appStart"</span><span class="p">,</span><span class="w"> </span><span class="s">"One more comment message"</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="examples">Examples</h2>
 <h3 id="userflow-annotations-on-pstool">UserFlow Annotations on PSTool</h3>
@@ -988,10 +996,8 @@ This can be useful to annotate events along the UserFlow (e.g., reaching a miles
 <p>There is a sample app demonstrating the use of the userflow library at:
 <a href="https://github.com/product-science/demoapps/tree/main/Android/userflow-android-example">https://github.com/product-science/demoapps/tree/main/Android/userflow-android-example</a></p>
 <h2 id="project-integration">Project Integration</h2>
-<p>By default, UserFlow Annotations are added to traces only when Product Science plugin is applied.
-To annotate user flows without applying the plugin, call <code>UserFlow#setAlwaysAnnotate(true)</code>.   </p>
-<p><em>CAUTION</em>: using this method can enable unwanted annotations in production builds.
-You will have to take steps to ensure that UserFlow annotations are only called where appropriate.</p></div>
+<p>If you want to enable UserFlow Annotations to be used with Regression Analysis feature, you should enable <code>UserFlow#setRegressionAnalysisEnabled(true)</code>.   </p>
+<p><em>CAUTION</em>: this method can enable some extra work. You will have to take steps to ensure that regression analysis is disabled in production builds.</p></div>
 
 
 
