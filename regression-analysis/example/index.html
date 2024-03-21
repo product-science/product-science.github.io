@@ -10,25 +10,23 @@
       
       
       
-        <link rel="canonical" href="https://docs.productscience.app/ra-build-upload/overview/">
+        <link rel="canonical" href="https://docs.productscience.app/regression-analysis/example/">
       
       
-        <link rel="prev" href="../../record-n-upload/ios/">
+        <link rel="prev" href="../api/">
       
-      
-        <link rel="next" href="../api/">
       
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
-        <title>Overview - </title>
+        <title>cURL example - </title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -64,9 +62,9 @@
       
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content=" - Overview">
+    <meta property="og:title" content=" - cURL example">
     <meta property="og:description" content="Learn to configure and use Product Science">
-    <meta property="og:url" content="https://docs.productscience.app/ra-build-upload/overview/">
+    <meta property="og:url" content="https://docs.productscience.app/regression-analysis/example/">
     <meta property="og:image" content="">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1080">
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#regression-analysis-build-uploading" class="md-skip">
+        <a href="#curl-example" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              cURL example
             
           </span>
         </div>
@@ -323,12 +321,12 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../overview/" class="md-tabs__link">
           
   
     
   
-  RA Build Upload
+  Regression Analysis
 
         </a>
       </li>
@@ -964,7 +962,7 @@
             
   
   <span class="md-ellipsis">
-    RA Build Upload
+    Regression Analysis
   </span>
   
 
@@ -974,9 +972,51 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            RA Build Upload
+            Regression Analysis
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -998,7 +1038,7 @@
           
   
   <span class="md-ellipsis">
-    Overview
+    cURL example
   </span>
   
 
@@ -1009,7 +1049,7 @@
         
   
   <span class="md-ellipsis">
-    Overview
+    cURL example
   </span>
   
 
@@ -1031,18 +1071,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#1-obtain-upload-context-id" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1. Obtain upload context ID
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http-api" class="md-nav__link">
+  <a href="#2-submit-build-metadata-and-obtain-upload-url" class="md-nav__link">
     <span class="md-ellipsis">
-      HTTP API
+      2. Submit build metadata and obtain upload URL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-upload-file-to-the-obtained-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Upload file to the obtained URL
     </span>
   </a>
   
@@ -1052,48 +1101,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API endpoints
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../example/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    cURL example
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1133,18 +1140,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#1-obtain-upload-context-id" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      1. Obtain upload context ID
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http-api" class="md-nav__link">
+  <a href="#2-submit-build-metadata-and-obtain-upload-url" class="md-nav__link">
     <span class="md-ellipsis">
-      HTTP API
+      2. Submit build metadata and obtain upload URL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-upload-file-to-the-obtained-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Upload file to the obtained URL
     </span>
   </a>
   
@@ -1168,27 +1184,76 @@
   
 
 
-<div><h1 id="regression-analysis-build-uploading">Regression Analysis Build Uploading</h1>
-<p>To make the most of the Regression Analysis feature, it makes sense to incorporate build uploading into a CI/CD pipeline.</p>
-<h2 id="overview">Overview</h2>
-<p>To upload builds to the PS Tool, follow these steps:</p>
-<ol>
-<li>Obtain the upload context ID</li>
-<li>Build a non-instrumented APK with the <a href="/integration/android/user-flow/">UserFlow</a> library enabled</li>
-<li>Upload the non-instrumented APK to PS Tool</li>
-<li>Build an instrumented APK with the <a href="/integration/android/user-flow/">UserFlow</a> library enabled</li>
-<li>Upload the instrumented APK to PS Tool</li>
-</ol>
-<p>Steps 2-3 and 4-5 could be executed in parallel. </p>
-<h2 id="http-api">HTTP API</h2>
-<p>Host:         <code>productscience.app</code><br>
-Protocol:     <code>HTTPS</code><br>
-Content type: <code>application/json</code><br>
-Charset:      <code>utf-8</code></p>
-<p>To access the API endpoints, you must supply your <code>productscience.token</code> from the <code>productscience.properties</code> file as an Authorization header. For instance: </p>
-<div class="highlight"><pre><span></span><code>Authorization: Bearer {YOUR_TOKEN}
+<div><h1 id="curl-example">cURL example</h1>
+<h2 id="1-obtain-upload-context-id">1. Obtain upload context ID</h2>
+<p>Request: </p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">"POST"</span><span class="w"> </span><span class="s2">"https://test.productscience.app/api/v1/projects/{projectName}/build-uploads"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Authorization: Bearer {YOUR_TOKEN}'</span>
 </code></pre></div>
-<p>See all the API endpoints <a href="/ra-build-upload/api">here</a>.</p></div>
+<p>Response: </p>
+<p></p><div class="highlight"><pre><span></span><code>HTTP/1.1 201 Created
+Content-Type: application/json
+Content-Length: 50
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-03-07T16:55:49.168Z"</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="2-submit-build-metadata-and-obtain-upload-url">2. Submit build metadata and obtain upload URL</h2>
+<p>Request: </p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">"POST"</span><span class="w"> </span><span class="s2">"https://test.productscience.app/api/v1/projects/{projectName}/builds"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Authorization: Bearer {YOUR_TOKEN}'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json; charset=utf-8'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">$'{</span>
+<span class="s1">  "contextId": 28,</span>
+<span class="s1">  "buildType": "APK",</span>
+<span class="s1">  "buildFileName": "app-play-release.apk",</span>
+<span class="s1">  "name": "v5.2.8"</span>
+<span class="s1">  "description": "Arbitrary description",</span>
+<span class="s1">  "sourceControlId": "e3c0fedc625094db1cbb2823fd425b51ddc0932e",</span>
+<span class="s1">  "sourceControlIsoTimestamp": "2024-03-07T14:55:43.540Z",</span>
+<span class="s1">}'</span>
+</code></pre></div>
+<p>Response:</p>
+<p></p><div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1430
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"uploadSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://storage.googleapis.com/some/path?someParams=someValue"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/octet-stream"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"X-Goog-Content-Length-Range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,1073741824"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"contextId"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"buildType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APK"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"buildFileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-play-release.apk"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v5.2.8"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arbitrary description"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"sourceControlId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e3c0fedc625094db1cbb2823fd425b51ddc0932e"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"sourceControlIsoTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-03-07T14:55:43.540Z"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-03-08T14:13:33.143Z"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"uploadState"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UPLOADING"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="3-upload-file-to-the-obtained-url">3. Upload file to the obtained URL</h2>
+<p>Request: </p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">"PUT"</span><span class="w"> </span><span class="s2">"https://storage.googleapis.com/some/path?someParams=someValue"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/octet-stream'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s1">'X-Goog-Content-Length-Range: 0,1073741824'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>--data-binary<span class="w"> </span><span class="s2">"@{FILE_PATH}"</span>
+</code></pre></div>
+<p>Response:</p>
+<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Content-Length: 0
+</code></pre></div></div>
 
 
 
@@ -1263,7 +1328,7 @@ Charset:      <code>utf-8</code></p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   </body>

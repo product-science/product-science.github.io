@@ -10,23 +10,25 @@
       
       
       
-        <link rel="canonical" href="https://docs.productscience.app/ra-build-upload/example/">
+        <link rel="canonical" href="https://docs.productscience.app/regression-analysis/api/">
       
       
-        <link rel="prev" href="../api/">
+        <link rel="prev" href="../overview/">
       
+      
+        <link rel="next" href="../example/">
       
       
       <link rel="icon" href="../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
-        <title>cURL example - </title>
+        <title>API - </title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -62,9 +64,9 @@
       
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content=" - cURL example">
+    <meta property="og:title" content=" - API">
     <meta property="og:description" content="Learn to configure and use Product Science">
-    <meta property="og:url" content="https://docs.productscience.app/ra-build-upload/example/">
+    <meta property="og:url" content="https://docs.productscience.app/regression-analysis/api/">
     <meta property="og:image" content="">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1080">
@@ -89,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#curl-example" class="md-skip">
+        <a href="#1-obtain-upload-context-id" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              cURL example
+              API
             
           </span>
         </div>
@@ -326,7 +328,7 @@
   
     
   
-  RA Build Upload
+  Regression Analysis
 
         </a>
       </li>
@@ -962,7 +964,7 @@
             
   
   <span class="md-ellipsis">
-    RA Build Upload
+    Regression Analysis
   </span>
   
 
@@ -972,7 +974,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            RA Build Upload
+            Regression Analysis
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1001,27 +1003,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API endpoints
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1031,14 +1012,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    cURL example
+    API
   </span>
   
 
@@ -1049,7 +1028,7 @@
         
   
   <span class="md-ellipsis">
-    cURL example
+    API
   </span>
   
 
@@ -1060,8 +1039,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1077,6 +1054,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1. Obtain upload context ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1085,6 +1086,30 @@
       2. Submit build metadata and obtain upload URL
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. Submit build metadata and obtain upload URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1101,6 +1126,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cURL example
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1130,8 +1176,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1146,6 +1190,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1. Obtain upload context ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1154,6 +1222,30 @@
       2. Submit build metadata and obtain upload URL
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. Submit build metadata and obtain upload URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1184,42 +1276,74 @@
   
 
 
-<div><h1 id="curl-example">cURL example</h1>
-<h2 id="1-obtain-upload-context-id">1. Obtain upload context ID</h2>
-<p>Request: </p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">"POST"</span><span class="w"> </span><span class="s2">"https://test.productscience.app/api/v1/projects/{projectName}/build-uploads"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Authorization: Bearer {YOUR_TOKEN}'</span>
+  <h1>API</h1>
+
+<div><h2 id="1-obtain-upload-context-id">1. Obtain upload context ID</h2>
+<h3 id="request">Request</h3>
+<div class="highlight"><pre><span></span><code>POST /api/v1/projects/{projectName}/build-uploads
 </code></pre></div>
-<p>Response: </p>
-<p></p><div class="highlight"><pre><span></span><code>HTTP/1.1 201 Created
-Content-Type: application/json
-Content-Length: 50
-</code></pre></div>
+<h3 id="response">Response</h3>
+<p>JSON body with parameters:</p>
+<ul>
+<li><strong><code>id</code></strong> (required) – integer upload contextId to use in next steps</li>
+<li><strong><code>dateCreated</code></strong> (required) – creation date in ISO 8601 format</li>
+</ul>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"dateCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-03-07T16:55:49.168Z"</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="2-submit-build-metadata-and-obtain-upload-url">2. Submit build metadata and obtain upload URL</h2>
-<p>Request: </p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">"POST"</span><span class="w"> </span><span class="s2">"https://test.productscience.app/api/v1/projects/{projectName}/builds"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Authorization: Bearer {YOUR_TOKEN}'</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json; charset=utf-8'</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-d<span class="w"> </span><span class="s1">$'{</span>
-<span class="s1">  "contextId": 28,</span>
-<span class="s1">  "buildType": "APK",</span>
-<span class="s1">  "buildFileName": "app-play-release.apk",</span>
-<span class="s1">  "name": "v5.2.8"</span>
-<span class="s1">  "description": "Arbitrary description",</span>
-<span class="s1">  "sourceControlId": "e3c0fedc625094db1cbb2823fd425b51ddc0932e",</span>
-<span class="s1">  "sourceControlIsoTimestamp": "2024-03-07T14:55:43.540Z",</span>
-<span class="s1">}'</span>
+<p>Call this endpoint when your build file is ready.</p>
+<h3 id="request_1">Request</h3>
+<div class="highlight"><pre><span></span><code>POST /api/v1/projects/{projectName}/builds
 </code></pre></div>
-<p>Response:</p>
-<p></p><div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
-Content-Type: application/json
-Content-Length: 1430
+<p>JSON body with parameters:</p>
+<ul>
+<li><strong><code>contextId</code></strong> (required) – upload context ID obtained in step 1</li>
+<li><strong><code>buildType</code></strong> (required) – possible values are: <code>APK</code> or <code>INSTRUMENTED_APK</code>  </li>
+<li><strong><code>buildFileName</code></strong> (required) – file name, e.g. <code>app-play-release.apk</code> </li>
+<li><strong><code>name</code></strong> – arbitrary name to distinguish the build, e.g. <code>release-5.2.8</code></li>
+<li><strong><code>description</code></strong> – arbitrary build description</li>
+<li><strong><code>sourceControlId</code></strong> – VCS commit, e.g. git commit hash</li>
+<li><strong><code>sourceControlIsoTimestamp</code></strong> – VCS commit timestamp in ISO 8601 format</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"contextId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"28"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"buildType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APK"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"buildFileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-play-release.apk"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v5.2.8"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arbitrary description"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"sourceControlId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e3c0fedc625094db1cbb2823fd425b51ddc0932e"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"sourceControlIsoTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-03-07T14:55:43.540Z"</span>
+<span class="p">}</span>
 </code></pre></div>
+<h3 id="response_1">Response</h3>
+<p>JSON body with parameters:</p>
+<ul>
+<li><strong><code>uploadSpec</code></strong> (required) – metadata to upload build to a storage<ul>
+<li><strong><code>method</code></strong> (required) – HTTP method</li>
+<li><strong><code>url</code></strong> (required) – URL</li>
+<li><strong><code>headers</code></strong> (required) – map of HTTP headers</li>
+</ul>
+</li>
+<li><strong><code>build</code></strong> (required) – build metadata<ul>
+<li><strong><code>id</code></strong> (required) – build ID number</li>
+<li><strong><code>contextId</code></strong> (required) – upload context ID obtained in step 1</li>
+<li><strong><code>buildType</code></strong> (required) – possible values are: <code>APK</code> or <code>INSTRUMENTED_APK</code></li>
+<li><strong><code>buildFileName</code></strong> (required) – file name, e.g. <code>app-play-release.apk</code></li>
+<li><strong><code>name</code></strong> – arbitrary name to distinguish the build, e.g. <code>release-5.2.8</code></li>
+<li><strong><code>description</code></strong> – arbitrary build description</li>
+<li><strong><code>sourceControlId</code></strong> – VCS commit, e.g. git commit hash</li>
+<li><strong><code>sourceControlIsoTimestamp</code></strong> – VCS commit timestamp in ISO 8601 format</li>
+<li><strong><code>uploadState</code></strong> – <code>UPLOADING</code> or <code>FINISHED</code> or <code>FAILED</code></li>
+<li><strong><code>dateCreated</code></strong> – build creation timestamp </li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"uploadSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span>
@@ -1244,15 +1368,13 @@ Content-Length: 1430
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="3-upload-file-to-the-obtained-url">3. Upload file to the obtained URL</h2>
-<p>Request: </p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">"PUT"</span><span class="w"> </span><span class="s2">"https://storage.googleapis.com/some/path?someParams=someValue"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/octet-stream'</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-H<span class="w"> </span><span class="s1">'X-Goog-Content-Length-Range: 0,1073741824'</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>--data-binary<span class="w"> </span><span class="s2">"@{FILE_PATH}"</span>
-</code></pre></div>
-<p>Response:</p>
-<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
-Content-Length: 0
+<p>Use <code>uploadSpec</code> object from the previous response to upload a file as <code>application/octet-stream</code>.</p>
+<div class="highlight"><pre><span></span><code>{uploadSpec.method} {uploadSpec.url}
+{uploadSpec.hearder1}: {uploadSpec.header1Value}
+{uploadSpec.hearder2}: {uploadSpec.header2Value}
+Content-Length: {YOUR_FILE_LENGTH}
+
+{YOUR_FILE_BINARY_DATA}
 </code></pre></div></div>
 
 
@@ -1328,7 +1450,7 @@ Content-Length: 0
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   </body>

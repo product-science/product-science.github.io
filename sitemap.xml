@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.productscience.app/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/device-set-up/android/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/device-set-up/ios/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/android/cicd/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/android/cli-tool/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/android/gradle/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/android/integration-faq-android/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/android/user-flow/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/ios/bazel/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/ios/distribution/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/integration/ios/xcode/</loc>
-         <lastmod>2024-03-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.productscience.app/ra-build-upload/api/</loc>
-         <lastmod>2024-03-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.productscience.app/ra-build-upload/example/</loc>
-         <lastmod>2024-03-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.productscience.app/ra-build-upload/overview/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/record-n-upload/android/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.productscience.app/record-n-upload/ios/</loc>
-         <lastmod>2024-03-12</lastmod>
+         <lastmod>2024-03-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.productscience.app/regression-analysis/api/</loc>
+         <lastmod>2024-03-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.productscience.app/regression-analysis/example/</loc>
+         <lastmod>2024-03-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.productscience.app/regression-analysis/overview/</loc>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
