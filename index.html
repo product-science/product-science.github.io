@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="images/Icon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
     
     
       
@@ -1608,32 +1608,54 @@
 .md-main {
     margin-left: auto;
 }
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+  .products-container {
+    display: block;
+  }
+  .product {
+    padding: 20px;
+  }
+}
+
+/* Styles for desktop screens */
+@media (min-width: 769px) {
+  .products-container {
+    display: flex;
+  }
+  .product {
+    flex: 1;
+    padding: 30px 100px;
+  }
+}
+
 </style>
 
 </head><body><h1 id="product-science-documentation">Product Science Documentation</h1>
-<p><a href="https://www.productscience.ai/">Product Science</a> 
-develops tools that enhance software performance and efficiency 
-by uncovering and addressing inefficiencies at the code level. 
-We analyzes the code and 
-actual runtime data to pinpoint performance issues. Our AI enables us 
-to do it more efficiently by providing unique insights for data 
-visualizations to help developers to identify the problem 
+<p><a href="https://www.productscience.ai/">Product Science</a>
+develops tools that enhance software performance and efficiency
+by uncovering and addressing inefficiencies at the code level.
+We analyze the code and
+actual runtime data to pinpoint performance issues. Our AI enables us
+to do it more efficiently by providing unique insights for data
+visualizations to help developers identify the problem
 right away.</p>
 <h2 id="explore-documentation-for-our-products">Explore documentation for our products</h2>
-<div style="display: flex;">
-  <div style="flex: 1; padding: 100px;">
+<div class="products-container">
+  <div class="product">
     <a href="cloud/overview">
         <img src="/images/Cloud.png" alt="Image Description 1" style="width:100%;">
         <p style="text-align: center; font-weight: bold;">CodeTuner for Cloud</p>
     </a>
   </div>
-  <div style="flex: 1; padding: 100px;">
+  <div class="product">
     <a href="mobile/overview">
         <img src="/images/Mobile.png" alt="Image Description 2" style="width:100%;">
         <p style="text-align: center; font-weight: bold;">CodeTuner for Mobile</p>
     </a>
   </div>
-  <div style="flex: 1; padding: 100px;">
+  <div class="product">
     <a href="ra/overview">
         <img src="/images/Regression.png" alt="Image Description 3" style="width:100%;">
         <p style="text-align: center; font-weight: bold;">Regression Analysis for Mobile</p>
@@ -1714,7 +1736,7 @@ right away.</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "content.code.annotate", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="assets/javascripts/bundle.471ce7a9.min.js"></script>
       
     
   </body>
