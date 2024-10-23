@@ -2,118 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.productscience.app/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/cloud/overview/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/cloud/usage/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/cloud/integration/integration/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/cloud/integration/jvm-agent/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/cloud/release-notes/release-note-1/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/overview/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/device-set-up/android/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/device-set-up/ios/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.productscience.app/mobile/integration/upload-api/</loc>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/android/cicd/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/android/cli-tool/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/android/gradle/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/android/integration-faq-android/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/android/user-flow/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/ios/bazel/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/ios/distribution/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/integration/ios/xcode/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/record-n-upload/android/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/record-n-upload/ios/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/release-notes/Frame-Drop-Visualization-for-Android/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/release-notes/Product-Analytic-Tags/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/release-notes/Quick-Start-Guide/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/release-notes/R1.1-New-UX-%26-UI/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/release-notes/R1.2-Admin/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/release-notes/R1.3-Video/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/mobile/release-notes/R1.4-Annotations/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/ra/api/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/ra/example/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
     <url>
          <loc>https://docs.productscience.app/ra/overview/</loc>
-         <lastmod>2024-09-11</lastmod>
+         <lastmod>2024-10-23</lastmod>
     </url>
 </urlset>
