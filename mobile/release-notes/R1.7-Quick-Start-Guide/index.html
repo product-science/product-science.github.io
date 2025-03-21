@@ -10,25 +10,25 @@
       
       
       
-        <link rel="canonical" href="https://docs.productscience.app/mobile/release-notes/Frame-Drop-Visualization-for-Android/">
+        <link rel="canonical" href="https://docs.productscience.app/mobile/release-notes/R1.7-Quick-Start-Guide/">
       
       
-        <link rel="prev" href="../R1.4-Annotations/">
+        <link rel="prev" href="../R1.6-Product-Analytic-Tags/">
       
       
-        <link rel="next" href="../Product-Analytic-Tags/">
+        <link rel="next" href="../R1.8-support-of-xcode16-and-swift6/">
       
       
       <link rel="icon" href="../../../images/Icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
-        <title>R1.5 - Frame Drop Visualization for Android - </title>
+        <title>R1.7 - Quick Start Guide - </title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -64,9 +64,9 @@
       
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content=" - R1.5 - Frame Drop Visualization for Android">
+    <meta property="og:title" content=" - R1.7 - Quick Start Guide">
     <meta property="og:description" content="Learn to configure and use Product Science">
-    <meta property="og:url" content="https://docs.productscience.app/mobile/release-notes/Frame-Drop-Visualization-for-Android/">
+    <meta property="og:url" content="https://docs.productscience.app/mobile/release-notes/R1.7-Quick-Start-Guide/">
     <meta property="og:image" content="">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1080">
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frame-drop-visualization-for-android" class="md-skip">
+        <a href="#r17-quick-start-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              R1.5 - Frame Drop Visualization for Android
+              R1.7 - Quick Start Guide
             
           </span>
         </div>
@@ -1448,19 +1448,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../R1.5-Frame-Drop-Visualization-for-Android/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1470,7 +1461,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1483,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Product-Analytic-Tags/" class="md-nav__link">
+      <a href="../R1.6-Product-Analytic-Tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1502,10 +1492,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Quick-Start-Guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1515,6 +1514,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1527,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../support-of-xcode16-and-swift6/" class="md-nav__link">
+      <a href="../R1.8-support-of-xcode16-and-swift6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1716,17 +1716,18 @@
   
 
 
-<div><h1 id="frame-drop-visualization-for-android">Frame Drop Visualization for Android</h1>
-<p>In our continuous effort to enhance the performance analysis capabilities of PS Tool, we’ve focused on refining our feature, highlighting 
-long frames. This feature helps identify frames that remain on screen longer than expected based on the current device’s frame rate, 
-pinpointing areas where the main thread is overwhelmed, particularly during scroll performance analysis. Building on this, we’ve updated our 
-highlighting strategy for frames on Android.</p>
-<p>PS Tool now highlights fewer frames, taking into account clusterization to better focus on scroll performance analysis. 
-This means we only highlight frames that take 2x longer than expected and clusters of several longer frames, even if they don’t reach 
-the 2x threshold. This approach confirms the same frame patterns previously reported via PS Tool by performance analysts while significantly 
-reducing noise. </p>
-<p>How it looks now: fewer frames highlighted, clear focus on UI Thread Hangs.</p>
-<p><img alt="FDVA" src="../FDVA.png"></p></div>
+<div><h1 id="r17-quick-start-guide">R1.7 - Quick Start Guide</h1>
+<p>The Quick Start Guide assists engineers during the onboarding experience by providing concise and simple instructions to help them leverage 
+the full potential of the PS Tool.</p>
+<p><img alt="Quick-Start-Guide" src="../Quick-Start-Guide.png"></p>
+<p>The Quick Start Guide will be accessible to users within the tool at all times, ensuring that immediate support is readily available.</p>
+<p>The Quick Start Guide comprises 3 main components:</p>
+<ul>
+<li><strong>Introduction Video</strong> A concise, less than 1-minute video that provides an overview of how PS Tool works.‍</li>
+<li><strong>Step-by-Step Guide</strong> A detailed step-by-step guide on how to perform various tasks using PS Tool. This section ensures that users gain a 
+solid grasp of important features that can empower their analysis.</li>
+<li><strong>Tutorial on how to identify insights</strong> Building upon the features learned in previous section, this session focuses on guiding users on how to use these features to find insights efficiently with real life examples and best practices.</li>
+</ul></div>
 
 
 
